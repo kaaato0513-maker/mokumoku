@@ -149,4 +149,18 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #f0f2f5; ma
     display: block;
     margin: 0 auto;
 }/* ここまで追加 */
-/* --- ここまで追加 --- */
+/* 画像が正しく表示されるための強制設定 */
+.img-wrapper {
+    width: 100%;
+    height: 200px; /* 高さを固定 */
+    overflow: hidden;
+    background-color: #eee; /* 画像がない時にグレーにする */
+    display: block;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を枠いっぱいに綺麗に収める */
+    display: block;
+}

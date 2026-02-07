@@ -3,72 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOKUMOKU</title>
+    <title>MOKUMOKU | 暮らしの解像度を上げるブログ</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .article-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { flex: 1; min-width: 300px; border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-decoration: none; color: #333; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .badge { background: #d32f2f; color: white; padding: 2px 8px; font-size: 11px; font-weight: bold; border-radius: 3px; }
+        .badge.old { background: #f1c40f; color: black; }
+        .latest-border { border: 2px solid #d32f2f; }
+    </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <header class="main-header">
-    <div class="hero-single">
-        <div class="hero-image-box" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80');">
-            <div class="hero-text-center">
-    <h1 style="font-size: 3.5em; letter-spacing: 8px; margin: 0; font-weight: bold;">MOKUMOKU</h1>
-    </div>
-        </div>
-    </div>
+    <header style="background: #333; color: white; text-align: center; padding: 60px 0;">
+        <h1 style="letter-spacing: 10px; margin: 0;">MOKUMOKU</h1>
     </header>
-        <main class="main-content">
-            <div class="tab-wrapper">
-                <button class="tab-btn active">新着記事</button>
-                <button class="tab-btn">オススメ</button>
-            </div>
 
-            <div class="article-grid">
-                <a href="article01.html" style="text-decoration: none; color: inherit; display: block;">
-                    <article class="card ranking-card">
-                        <div class="img-wrapper">
-                            <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" alt="A8.net紹介">
-                            <span class="cat-label" style="background:#f1c40f; color:#000;">MUST BUY</span>
-                        </div>
-                        <div class="card-body">
-                            <span class="rank-number">LATEST POST</span>
-                            <h3>副業ブログの第一歩！国内最大級のA8.netに登録して「自分だけの収益」を作る方法</h3>
-                            <p class="date">🕒 2026.02.06</p>
-                        </div>
-                    </article>
-                </a>
+    <div class="container">
+        <h2>新着記事</h2>
+        <div class="article-grid">
+            
+            <a href="article02.html" class="card latest-border">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&w=500&q=80" alt="NELL">
+                <div class="card-body">
+                    <span class="badge">NEW POST</span>
+                    <h3 style="margin: 10px 0;">【腰痛予防】朝が楽になるNELLマットレス導入レビュー</h3>
+                    <p style="color: #888; font-size: 0.8em;">🕒 2026.02.07</p>
+                </div>
+            </a>
 
-                <article class="card">
-                    <div class="img-wrapper" style="filter: grayscale(100%); opacity: 0.6;">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80">
-                        <span class="cat-label">COMING SOON</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>【準備中】次に紹介する愛用品を執筆しています。お楽しみに！</h3>
-                        <p class="date">🕒 2026.02.xx</p>
-                    </div>
-                </article>
-            </div>
-        </main>
+            <a href="article01.html" class="card">
+                <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" alt="A8.net">
+                <div class="card-body">
+                    <span class="badge old">BLOG</span>
+                    <h3 style="margin: 10px 0;">副業ブログの第一歩！A8.netで収益を作る方法</h3>
+                    <p style="color: #888; font-size: 0.8em;">🕒 2026.02.06</p>
+                </div>
+            </a>
 
-        <aside class="sidebar">
-            <div class="side-box">
-                <h4 class="side-title">人気の記事</h4>
-                <div class="mini-item">
-                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=100&q=80">
-                    <p>iPadを最強のサブ機にするおすすめ周辺機器</p>
-                </div>
-                <div class="mini-item">
-                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=100&q=80">
-                    <p>デスク周りがスッキリ！魔法のケーブル整理術</p>
-                </div>
-                <div class="mini-item">
-                    <img src="https://images.unsplash.com/photo-1526738549149-8e07eca2c1cf?auto=format&fit=crop&w=100&q=80">
-                    <p>失敗しない！アロマディフューザーの選び方</p>
-                </div>
-            </div>
-        </aside>
+        </div>
     </div>
 
 </body>
