@@ -5,88 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKUMOKU | 暮らしの解像度を上げる愛用品ブログ</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* カテゴリセクションの共通スタイル */
+        .category-section { margin-bottom: 60px; }
+        .category-title { font-family: 'Noto Serif JP', serif; font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        .article-card { text-decoration: none; color: inherit; background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: block; transition: 0.3s; }
+        .article-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .article-card img { width: 100%; height: 180px; object-fit: cover; }
+        .article-card div { padding: 15px; }
+        .article-card h4 { margin: 0; font-size: 1em; line-height: 1.5; height: 3em; overflow: hidden; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    </style>
 </head>
-<body>
+<body style="background-color: #fafafa; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: #333;">
 
-    <header class="main-header">
-        <div class="hero-single">
-            <div class="hero-image-box" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80');">
-                <div class="hero-text-center">
-                    <h1 style="font-size: 3.5em; letter-spacing: 8px; margin: 0; font-weight: bold; color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">MOKUMOKU</h1>
-                </div>
-            </div>
+    <header style="position: relative; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; filter: brightness(0.8);"></div>
+        <div style="position: relative; z-index: 1; text-align: center;">
+            <h1 style="font-family: 'Noto Serif JP', serif; font-size: 3.5em; letter-spacing: 12px; margin: 0; color: #fff;">MOKUMOKU</h1>
         </div>
     </header>
 
-    <div class="container" style="display: flex; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <main class="main-content" style="flex: 1;">
-            <div class="tab-wrapper" style="margin-bottom: 30px;">
-                <button class="tab-btn active">新着記事</button>
-            </div>
-
-            <div class="article-grid" style="display: flex; flex-wrap: wrap; gap: 20px;">
-                
-                <a href="article02.html" style="text-decoration: none; color: inherit; display: block; flex: 1; min-width: 300px;">
-                    <article class="card ranking-card" style="border: 2px solid #d32f2f; position: relative; border-radius: 8px; overflow: hidden;">
-                        <div class="img-wrapper" style="height: 250px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="NELLマットレス" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="cat-label" style="background:#d32f2f; color:#fff; position: absolute; top: 10px; left: 10px; padding: 4px 8px; font-size: 12px; font-weight: bold;">NEW</span>
-                        </div>
-                        <div class="card-body" style="padding: 20px;">
-                            <span class="rank-number" style="color: #d32f2f; font-weight: bold; font-size: 12px;">LATEST POST</span>
-                            <h3 style="margin: 10px 0; font-size: 1.3em; line-height: 1.4;">「寝返り」が人生を変える。腰痛・暑がりを科学するNELLマットレス完全ガイド</h3>
-                            <p class="date" style="color: #888; font-size: 0.9em;">🕒 2026.02.07</p>
-                        </div>
-                    </article>
-                </a>
-
-                <a href="article01.html" style="text-decoration: none; color: inherit; display: block; flex: 1; min-width: 300px;">
-                    <article class="card" style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-                        <div class="img-wrapper" style="height: 250px; overflow: hidden;">
-                            <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" alt="A8.net紹介" style="width: 100%; height: 100%; object-fit: cover;">
-                            <span class="cat-label" style="background:#f1c40f; color:#000; position: absolute; top: 10px; left: 10px; padding: 4px 8px; font-size: 12px;">MUST BUY</span>
-                        </div>
-                        <div class="card-body" style="padding: 20px;">
-                            <h3 style="margin: 10px 0; font-size: 1.2em;">副業ブログの第一歩！国内最大級のA8.netに登録して「自分だけの収益」を作る方法</h3>
-                            <p class="date" style="color: #888; font-size: 0.9em;">🕒 2026.02.06</p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-        </main>
-
-        <aside class="sidebar" style="width: 300px; margin-left: 30px;">
-            <div class="side-box" style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
-                <h4 style="border-bottom: 2px solid #333; padding-bottom: 10px;">人気の記事</h4>
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=60&h=60" style="border-radius: 4px;">
-                    <p style="font-size: 0.85em;">iPadを最強のサブ機にする周辺機器</p>
-                </div>
-            </div>
-        </aside>
-    </div>
-<section class="past-articles-list" style="margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee;">
-    <h2 style="font-size: 1.5em; margin-bottom: 20px; border-left: 5px solid #333; padding-left: 15px;">過去の記事一覧</h2>
-    <ul style="list-style: none; padding: 0;">
+    <div style="max-width: 1100px; margin: -40px auto 60px; position: relative; z-index: 2; padding: 0 20px;">
         
-        <li style="margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
-            <a href="article02.html" style="text-decoration: none; color: #333; display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-weight: bold;">「寝返り」が人生を変える。NELLマットレス完全ガイド</span>
-                <span style="color: #888; font-size: 0.8em;">2026.02.07</span>
+        <main>
+            <h2 style="font-size: 0.8em; letter-spacing: 2px; color: #888; margin-bottom: 20px;">NEW POST</h2>
+            <a href="article02.html" style="text-decoration: none; color: inherit; display: block; background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 40px;">
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px; height: 350px;">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=80" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1; min-width: 300px; padding: 40px;">
+                        <span style="color: #d32f2f; font-weight: bold; font-size: 0.8em;">LATEST POST</span>
+                        <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.6em; margin: 15px 0;">「寝返り」が人生を変える。NELLマットレス完全ガイド</h3>
+                        <p style="color: #666; font-size: 0.9em;">2026.02.07 — Sleep & Health</p>
+                    </div>
+                </div>
             </a>
-        </li>
 
-        <li style="margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
-            <a href="article01.html" style="text-decoration: none; color: #333; display: flex; justify-content: space-between; align-items: center;">
-                <span>副業ブログの第一歩！国内最大級のA8.netに登録して収益を作る方法</span>
-                <span style="color: #888; font-size: 0.8em;">2026.02.06</span>
+            <h2 style="font-size: 0.8em; letter-spacing: 2px; color: #888; margin-bottom: 20px;">COMING SOON</h2>
+            <a href="#past-archive" style="text-decoration: none; color: inherit; display: flex; align-items: center; background: #eee; border-radius: 4px; padding: 30px; margin-bottom: 60px; border: 2px dashed #ccc;">
+                <div style="flex: 1; text-align: center;">
+                    <p style="margin: 0; font-weight: bold; color: #888;">COMING SOON... (クリックで過去記事一覧へ)</p>
+                </div>
             </a>
-        </li>
 
-        </ul>
-</section>
+            <section id="past-archive" class="category-section">
+                <h2 class="category-title">Archives (これまでの記事)</h2>
+                <div class="grid-container">
+                    <a href="article02.html" class="article-card">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=400&q=80">
+                        <div>
+                            <h4>NELLマットレス完全ガイド</h4>
+                            <p style="font-size:0.7em; color:#999; margin: 10px 0 0;">2026.02.07</p>
+                        </div>
+                    </a>
+                    <a href="article01.html" class="article-card">
+                        <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png">
+                        <div>
+                            <h4>A8.netでブログ収益化の第一歩</h4>
+                            <p style="font-size:0.7em; color:#999; margin: 10px 0 0;">2026.02.06</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
 
-    <footer style="text-align: center; padding: 60px 0; color: #888; font-size: 0.9em;">
+            <section class="category-section">
+                <h2 class="category-title">おすすめ</h2>
+                <div class="grid-container">
+                    <div style="color:#ccc; padding: 40px;">記事を準備中です</div>
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">暮らし</h2>
+                <div class="grid-container">
+                    </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">食事飲み物</h2>
+                <div class="grid-container">
+                </div>
+            </section>
+
+            <section class="category-section">
+                <h2 class="category-title">投資</h2>
+                <div class="grid-container">
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer style="text-align: center; padding: 80px 0; background: #333; color: #fff; font-size: 0.8em; letter-spacing: 2px;">
         © 2026 MOKUMOKU
     </footer>
 
