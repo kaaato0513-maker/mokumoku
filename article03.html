@@ -3,40 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【実食】MAMEIL（マメイル）生チョコマカロン | MOKUMOKU</title>
+    <title>【実食レビュー】MAMEIL（マメイル）生チョコマカロン | MOKUMOKU</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { 
             background-color: #fafafa; 
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            margin: 0; color: #333; line-height: 1.9; writing-mode: horizontal-tb;
+            margin: 0; color: #333; line-height: 2.0; writing-mode: horizontal-tb;
         }
         .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; display: block; }
         .post-header { text-align: center; margin-bottom: 50px; display: block; }
-        .post-category { color: #d98880; font-weight: bold; font-size: 0.9em; letter-spacing: 2px; display: block; margin-bottom: 10px; }
-        .post-title { font-family: 'Noto Serif JP', serif; font-size: 2.2em; margin: 0; line-height: 1.4; display: block; }
+        .post-category { color: #d98880; font-weight: bold; font-size: 0.9em; letter-spacing: 2px; display: block; margin-bottom: 15px; }
+        .post-title { font-family: 'Noto Serif JP', serif; font-size: 2.4em; margin: 0; line-height: 1.4; display: block; }
         .main-visual { width: 100%; height: auto; border-radius: 15px; margin-bottom: 50px; display: block; transition: 0.3s; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .main-visual:hover { opacity: 0.9; }
-        .rich-card { background: #fff; padding: 40px; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4) !important; display: block; }
+        .rich-card { background: #fff; padding: 45px; border-radius: 15px; margin-bottom: 45px; box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4) !important; display: block; }
         
-        h2 { font-family: 'Noto Serif JP', serif; font-size: 1.8em; border-left: 5px solid #d98880; padding-left: 20px; margin: 60px 0 30px; line-height: 1.3; display: block; }
-        h3 { font-family: 'Noto Serif JP', serif; font-size: 1.4em; margin: 40px 0 20px; color: #d98880; }
-        p { margin-bottom: 25px; font-size: 1.1em; display: block; text-align: justify; }
+        h2 { font-family: 'Noto Serif JP', serif; font-size: 1.9em; border-left: 6px solid #d98880; padding-left: 20px; margin: 70px 0 35px; line-height: 1.3; display: block; }
+        h3 { font-family: 'Noto Serif JP', serif; font-size: 1.5em; margin: 45px 0 25px; color: #d98880; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        p { margin-bottom: 30px; font-size: 1.15em; display: block; text-align: justify; }
         
-        /* フレーバー紹介 */
-        .flavor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        .flavor-item { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #eee; text-align: center; padding-bottom: 15px; }
-        .flavor-item img { width: 100%; height: 220px; object-fit: cover; }
-        .flavor-name { font-weight: bold; margin-top: 15px; display: block; color: #333; letter-spacing: 1px; }
+        .flavor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+        .flavor-item { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #eee; text-align: center; padding-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .flavor-item img { width: 100%; height: 250px; object-fit: cover; }
+        .flavor-name { font-weight: bold; margin-top: 15px; display: block; color: #222; font-size: 1.2em; letter-spacing: 2px; }
         
         .highlight { background: linear-gradient(transparent 60%, #fff3b0 60%); font-weight: bold; }
-        .cta-box { text-align: center; background: #222; color: #fff; padding: 50px 30px; border-radius: 15px; margin-top: 80px; display: block; }
-        .btn-buy { display: inline-block; background: #fff; color: #222; padding: 18px 45px; border-radius: 35px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: 0.3s; }
-        .btn-buy:hover { transform: scale(1.05); }
-        .banner-container { text-align: center; margin: 60px 0; }
-        footer { text-align: center; padding: 80px 0; background: #222; color: #666; font-size: 0.75em; letter-spacing: 3px; }
-        @media (max-width: 600px) { .flavor-grid { grid-template-columns: 1fr; } .post-title { font-size: 1.6em; } }
+        .cta-box { text-align: center; background: #222; color: #fff; padding: 60px 40px; border-radius: 15px; margin-top: 100px; display: block; }
+        .btn-buy { display: inline-block; background: #fff; color: #222; padding: 20px 55px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 30px; transition: 0.3s; font-size: 1.1em; }
+        .btn-buy:hover { transform: scale(1.05); background: #fdf2f2; }
+        .banner-container { text-align: center; margin: 80px 0; }
+        footer { text-align: center; padding: 100px 0; background: #222; color: #666; font-size: 0.8em; letter-spacing: 3px; }
+        @media (max-width: 600px) { .flavor-grid { grid-template-columns: 1fr; } .post-title { font-size: 1.8em; } }
     </style>
 </head>
 <body>
@@ -45,63 +43,64 @@
         <header class="post-header">
             <span class="post-category">FOOD & DRINK</span>
             <h1 class="post-title">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロンが最高すぎる！</h1>
-            <p style="color: #888; font-size: 0.9em; margin-top: 20px;">2026.02.11 — MOKUMOKU</p>
+            <p style="color: #888; font-size: 0.9em; margin-top: 25px;">2026.02.11 — MOKUMOKU</p>
         </header>
 
         <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+BWVTE" rel="nofollow">
-            <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?q=80&w=1000&auto=format&fit=crop" class="main-visual" alt="MAMEIL 生チョコマカロン">
+            <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&q=80&w=1200" class="main-visual" alt="MAMEIL 生チョコマカロン">
         </a>
         <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4AX6CG+FNTINM+51FE+BWVTE" alt="">
 
         <div class="rich-card">
-            <p>「マカロンなんて、どれも同じでしょ？」<br>もしそう思っているなら、MAMEIL（マメイル）はその先入観を鮮やかに裏切ってくれます。これは単なるお菓子ではなく、1週間という時間を閉じ込めた「体験」そのものでした。</p>
+            <p>「マカロンなんて、どれも同じでしょ？」<br>もしそう思っているなら、MAMEIL（マメイル）はその先入観を鮮やかに裏切ってくれます。これは単なるお菓子ではなく、1週間という時間を閉じ込めた「体験」そのものでした。一口食べた瞬間に広がる世界観を、余すことなくお届けします。</p>
         </div>
 
         <h2>五感を満たす、MAMEILの味と香り</h2>
+        
         <div class="flavor-grid">
             <div class="flavor-item">
-                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=600&auto=format&fit=crop" alt="CHOCOLATE">
+                <img src="https://images.unsplash.com/photo-1548325068-0775d72f105e?auto=format&fit=crop&q=80&w=600" alt="CHOCOLATE">
                 <span class="flavor-name">CHOCOLATE</span>
-                <p style="font-size: 0.8em; padding: 0 15px; color: #666;">カカオ豆から作るBean to Bar。チョコが「重くない」驚きを。</p>
+                <p style="font-size: 0.85em; padding: 0 15px; color: #666;">Bean to Barの真髄。濃厚ながら後味は驚くほど軽やか。</p>
             </div>
             <div class="flavor-item">
-                <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29a23?q=80&w=600&auto=format&fit=crop" alt="PISTACHIO">
+                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=600" alt="PISTACHIO">
                 <span class="flavor-name">PISTACHIO</span>
-                <p style="font-size: 0.8em; padding: 0 15px; color: #666;">ナッツの力強い香ばしさが生チョコの甘みを引き立てる。</p>
+                <p style="font-size: 0.85em; padding: 0 15px; color: #666;">最高級ピスタチオの香ばしさと生チョコが織りなす極上の調和。</p>
             </div>
         </div>
 
-        <h3>「生チョコ」という名の魔法</h3>
-        <p>一般的なマカロンに挟まれているクリームを想像して食べると、その違いに衝撃を受けます。MAMEILのそれは、まさに<span class="highlight">「純度の高い生チョコ」そのもの。</span></p>
-        <p>口に入れた瞬間はしっかりとした密度を感じるのに、体温に触れた瞬間、マカロン生地と溶け合いながらスーッと消えていく。残るのはカカオの心地よい酸味と、上品な甘い余韻だけ。この「引き際の美しさ」こそが、168時間という途方もない時間を費やした証なのだと実感します。</p>
+        <h3>「生チョコ」という名の、あまりに深い魔法</h3>
+        <p>一般的なマカロンに挟まれているジャムやクリームを想像して口に運ぶと、その違いに衝撃を受けます。MAMEILの主役は、まさに<span class="highlight">「純度の高い生チョコ」そのもの。</span></p>
+        <p>口に入れた瞬間はしっかりとした密度を感じるのに、体温に触れた瞬間、マカロン生地と溶け合いながらスーッと消えていく。残るのはカカオの心地よい酸味と、上品な甘い余韻だけ。この「引き際の美しさ」こそが、168時間という途方もない時間を費やした証なのだと実感します。まるで雪解けのような、しかし力強いカカオの主張に、思わず目を閉じて浸ってしまいました。</p>
 
         <h2>1. マカロンの概念を覆す「究極の断面」</h2>
         <p>ひと口噛んだ瞬間、繊細な生地がホロリと崩れ、中から現れるのは驚くほど濃厚な生チョコ。<span class="highlight">一般的な「チョコ味のクリーム」ではありません。</span>カカオ豆から1週間かけて手作りされた、本物の「生チョコ」が主役です。</p>
-        <p>この圧倒的なボリューム感（約1cmの厚み！）と、とろける口溶けのコントラスト。視覚で驚き、食感で恋に落ちる。そんな感動の断面がそこにあります。</p>
+        <p>この圧倒的なボリューム感（約1cmの厚み！）と、とろける口溶けのコントラスト。視覚で驚き、食感で恋に落ちる。断面を見ただけで、どれだけの手間がかけられているかが瞬時に伝わる、まさに芸術品のようなマカロンです。</p>
 
         <h2>2. 箱を開けた瞬間、そこは「カカオの楽園」だった</h2>
         <p>MAMEILが届いたら、まずは食べるのをグッと堪えて、箱を開けてみてください。<span class="highlight">敷き詰められたカカオハスク（カカオ豆の殻）から立ち上る、深く芳醇な香り</span>に包まれるはずです。</p>
-        <p>五感すべてを「最高」で満たすために設計された、世界一贅沢な1粒。味覚だけでなく、嗅覚までも支配する没入感。頑張った自分への、これ以上ないほど甘い「正解」がここにあります。</p>
+        <p>これまでのマカロンにはなかった「嗅覚」でのアプローチ。五感すべてを「最高」で満たすために設計された、世界一贅沢な1粒です。味覚だけでなく、箱を開けた瞬間の香りまでも支配する没入感。頑張った自分への、これ以上ないほど甘い「正解」がここにあります。</p>
 
         <h2>3. たった1粒に「168時間」を費やす贅沢</h2>
-        <p>効率を求める時代に、MAMEILはあえて逆走します。カカオ豆の選別からコンチング、マカロンの焼き上がりまで、<span class="highlight">費やす時間は延べ1週間。</span></p>
-        <p>大量生産では絶対に辿り着けない、香り・酸味・甘みの絶妙なバランス。これこそが、情熱の結晶。これまで「何を選んでも同じ」と思っていた方にこそ、この深い納得感を味わってほしいのです。</p>
+        <p>効率を求める時代に、MAMEILはあえて逆走します。カカオ豆の選別から、3つの国から厳選されたカカオのブレンド、そしてマカロンの焼き上がりまで、<span class="highlight">費やす時間は延べ1週間。</span></p>
+        <p>大量生産では絶対に辿り着けない、香り・酸味・甘みの絶妙なバランス。これこそが、情熱の結晶。これまで「お菓子なんてどれを選んでも同じ」と思っていた方にこそ、この深い納得感と感動を味わってほしいのです。</p>
 
         <div class="rich-card" style="background: #fdf2f2; border-left: 5px solid #d98880;">
-            <h3 style="margin-top: 0; color: #333;">実食してわかった「最高の食べ時」</h3>
-            <p>冷蔵庫から出してすぐはチョコが少し硬めです。<span class="highlight">15分ほど常温に置いたタイミング</span>がベスト。マカロン生地がしっとりと馴染み、中の生チョコが最も滑らかに口の中で踊ります。</p>
+            <h3 style="margin-top: 0; color: #333; border-bottom: none;">実食してわかった「最高の食べ時」</h3>
+            <p>冷蔵庫から出してすぐはチョコが少しパキッとしています。そのままでも美味しいですが、<span class="highlight">15分〜20分ほど常温に置いたタイミング</span>がベスト。マカロン生地がしっとりと馴染み、中の生チョコが最も滑らかに口の中で踊り出します。コーヒーや赤ワインとの相性も抜群ですよ。</p>
         </div>
 
         <div class="banner-container">
-            <p style="font-size: 0.8em; color: #888; margin-bottom: 15px;">＼ 最高のご褒美はこちらから ／</p>
+            <p style="font-size: 0.85em; color: #888; margin-bottom: 20px;">＼ 最高のご褒美はこちらから ／</p>
             <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+C3QQ9" rel="nofollow">
             <img border="0" width="300" height="250" alt="MAMEIL公式バナー" src="https://www26.a8.net/svt/bgt?aid=260208736947&wid=001&eno=01&mid=s00000023513002033000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4AX6CG+FNTINM+51FE+C3QQ9" alt="">
         </div>
 
         <div class="cta-box">
-            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.5em;">この「感動」を、あなたも体験してみませんか？</h3>
-            <p>1粒で世界が変わる、至福のカカオ体験を。</p>
+            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.6em; color: #fff; border: none;">この「感動」を、あなたも体験してみませんか？</h3>
+            <p style="text-align: center;">1粒で世界が変わる、至福のカカオ体験を。</p>
             <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+BWVTE" rel="nofollow" class="btn-buy">MAMEIL公式サイトで詳しく見る</a>
             <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4AX6CG+FNTINM+51FE+BWVTE" alt="">
         </div>
