@@ -8,23 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { background-color: #fafafa; font-family: sans-serif; margin: 0; color: #333; line-height: 1.9; }
-        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .post-header { text-align: center; margin-bottom: 60px; }
-        .post-category { color: #d98880; font-weight: bold; font-size: 0.8em; letter-spacing: 2px; }
-        .post-title { font-family: 'Noto Serif JP', serif; font-size: 2em; margin: 20px 0; line-height: 1.4; }
-        .main-visual { width: 100%; height: 450px; object-fit: cover; border-radius: 15px; margin-bottom: 50px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .post-header { text-align: center; margin-bottom: 60px; width: 100%; }
+        .post-category { color: #d98880; font-weight: bold; font-size: 0.9em; letter-spacing: 2px; display: block; margin-bottom: 15px; }
+        .post-title { font-family: 'Noto Serif JP', serif; font-size: 2.2em; margin: 0; line-height: 1.4; word-break: normal; }
+        
+        .main-visual { width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: 15px; margin-bottom: 50px; }
         
         .rich-card { 
             background: #fff; padding: 40px; border-radius: 15px; margin-bottom: 40px;
             box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4) !important; 
         }
         
-        h2 { font-family: 'Noto Serif JP', serif; font-size: 1.5em; border-left: 4px solid #333; padding-left: 15px; margin: 60px 0 30px; }
-        p { margin-bottom: 25px; }
+        h2 { font-family: 'Noto Serif JP', serif; font-size: 1.7em; border-left: 5px solid #d98880; padding-left: 20px; margin: 60px 0 30px; line-height: 1.3; }
+        p { margin-bottom: 25px; font-size: 1.05em; }
         .highlight { background: linear-gradient(transparent 60%, #fff3b0 60%); font-weight: bold; }
         
-        .cta-box { text-align: center; background: #222; color: #fff; padding: 40px; border-radius: 15px; margin-top: 80px; }
-        .btn-buy { display: inline-block; background: #fff; color: #222; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .cta-box { text-align: center; background: #222; color: #fff; padding: 50px 30px; border-radius: 15px; margin-top: 80px; }
+        .btn-buy { display: inline-block; background: #fff; color: #222; padding: 18px 45px; border-radius: 35px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: 0.3s; }
+        .btn-buy:hover { transform: scale(1.05); }
+
+        @media (max-width: 600px) {
+            .post-title { font-size: 1.6em; }
+            .container { padding: 40px 15px; }
+        }
     </style>
 </head>
 <body>
@@ -32,8 +39,8 @@
     <div class="container">
         <header class="post-header">
             <span class="post-category">FOOD & DRINK</span>
-            <h1 class="post-title">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロンが最高すぎる。口コミや保存方法も解説</h1>
-            <p style="color: #888; font-size: 0.9em;">2026.02.11 — MOKUMOKU</p>
+            <h1 class="post-title">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロンが最高すぎる！</h1>
+            <p style="color: #888; font-size: 0.9em; margin-top: 20px;">2026.02.11 — MOKUMOKU</p>
         </header>
 
         <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=1200&q=80" class="main-visual" alt="MAMEIL マカロン">
@@ -58,15 +65,15 @@
         <p>大切な人へのプレゼント、いつも似たようなものを選んでいませんか？MAMEILは、洗練されたパッケージを開けた瞬間のサプライズから、食べた後の感動まで、すべてがセットになった体験型スイーツです。</p>
         <p>「こんなの初めて食べた！」という驚きと笑顔を約束する、<span class="highlight">失敗したくない日のための勝負ギフト。</span>贈ったあなたの評価まで高めてくれる、そんな力強さがこの1粒には宿っています。</p>
 
-        <div class="rich-card" style="background: #fdf2f2;">
-            <h3 style="margin-top: 0;">保存方法と美味しく食べるコツ</h3>
+        <div class="rich-card" style="background: #fdf2f2; border-left: 5px solid #d98880;">
+            <h3 style="margin-top: 0; font-family: 'Noto Serif JP', serif;">保存方法と美味しく食べるコツ</h3>
             <p>MAMEILは非常に繊細な生チョコを使用しているため、**「冷蔵保存」**が基本です。食べる直前に数分だけ常温に戻すと、中の生チョコがより、とろりと溶け出し、カカオの香りが一層引き立ちます。</p>
         </div>
 
         <div class="cta-box">
-            <h3>この「感動」を、あなたも体験してみませんか？</h3>
+            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.5em;">この「感動」を、あなたも体験してみませんか？</h3>
             <p>1週間かけて作られる、世界で一つだけのマカロン。</p>
-            <a href="#" class="btn-buy">MAMEIL公式サイトで詳しく見る</a>
+            <a href="https://mameil.com/" target="_blank" class="btn-buy">MAMEIL公式サイトで詳しく見る</a>
         </div>
     </div>
 
