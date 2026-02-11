@@ -3,196 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【実食】MAMEIL（マメイル）生チョコマカロン | MOKUMOKU</title>
+    <title>【実食レビュー】MAMEIL（マメイル）生チョコマカロン | MOKUMOKU</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 1. 縦書きや横読みの原因を完全に排除 */
+        /* 縦書きのバグを根絶するリセット設定 */
         html, body {
+            writing-mode: horizontal-tb !important; /* 横書きを最優先 */
+            -ms-writing-mode: horizontal-tb !important;
+            -webkit-writing-mode: horizontal-tb !important;
+            direction: ltr !important;             /* 左から右へ */
+            unicode-bidi: isolate !important;
+            text-orientation: mixed !important;
             margin: 0;
             padding: 0;
-            writing-mode: horizontal-tb !important; /* 横書きを強制 */
-            direction: ltr !important;             /* 左から右を強制 */
             background-color: #fafafa;
             color: #333;
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            line-height: 1.8;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
         }
 
-        /* 2. 中央に1本の道を作るシンプルなレイアウト */
-        .main-content {
-            max-width: 700px;
+        /* 記事全体のレイアウト */
+        .wrapper {
+            display: block !important; /* 縦並びを保証 */
+            max-width: 800px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
             background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
 
-        /* 3. 上から順に流れる各パーツの設定 */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
+        /* 各要素が横書きで上から下に並ぶように指定 */
+        header, section, div, h1, h2, h3, p, span {
+            writing-mode: horizontal-tb !important;
+            display: block; /* 1つずつ上から並べる */
+            text-align: left;
         }
 
-        .category {
-            color: #d98880;
-            font-weight: bold;
-            font-size: 0.9em;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 10px;
-        }
+        header { text-align: center !important; margin-bottom: 50px; }
+        h1 { font-family: 'Noto Serif JP', serif; font-size: 2em; line-height: 1.5; margin: 20px 0; }
+        h2 { font-family: 'Noto Serif JP', serif; font-size: 1.6em; border-left: 5px solid #d98880; padding-left: 15px; margin: 60px 0 25px; border-bottom: none; }
+        
+        .intro-box { background: #fdfaf9; padding: 30px; border-radius: 10px; margin: 30px 0; line-height: 2; }
+        p { margin-bottom: 25px; font-size: 1.1em; line-height: 1.9; }
+        .highlight { background: linear-gradient(transparent 60%, #fff3b0 60%); font-weight: bold; display: inline !important; }
 
-        h1 {
-            font-size: 2em;
-            line-height: 1.4;
-            margin: 0;
-        }
+        /* 口コミエリア */
+        .review-card { border: 1px solid #eee; padding: 25px; border-radius: 12px; margin-bottom: 20px; background: #fff; }
+        .stars { color: #d98880; margin-bottom: 10px; font-size: 1.2em; }
+        .user-name { font-size: 0.9em; color: #888; text-align: right !important; }
 
-        .lead-text {
-            background-color: #fdfaf9;
-            padding: 30px;
-            border-left: 4px solid #d98880;
-            margin: 40px 0;
-            font-size: 1.1em;
-        }
+        /* ボタン・広告 */
+        .cta-container { background: #222; color: #fff; padding: 60px 30px; border-radius: 15px; text-align: center !important; margin-top: 60px; }
+        .btn-link { display: inline-block !important; background: #fff; color: #222; padding: 18px 45px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 30px; }
 
-        h2 {
-            font-size: 1.6em;
-            border-bottom: 2px solid #d98880;
-            padding-bottom: 10px;
-            margin: 60px 0 30px 0;
-        }
-
-        p {
-            margin-bottom: 25px;
-            font-size: 1.1em;
-        }
-
-        .highlight {
-            background: linear-gradient(transparent 70%, #fff3b0 70%);
-            font-weight: bold;
-        }
-
-        /* 口コミ：上から下へ並べる */
-        .review-container {
-            margin: 40px 0;
-        }
-
-        .review-item {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .review-stars {
-            color: #d98880;
-            margin-bottom: 5px;
-        }
-
-        .review-user {
-            display: block;
-            text-align: right;
-            font-size: 0.85em;
-            color: #888;
-        }
-
-        /* 最後のボタンエリア */
-        .cta-area {
-            text-align: center;
-            background-color: #222;
-            color: #fff;
-            padding: 50px 20px;
-            border-radius: 10px;
-            margin-top: 60px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #fff;
-            color: #222;
-            padding: 18px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 50px 0;
-            color: #aaa;
-            font-size: 0.8em;
-        }
-
-        /* モバイル対応 */
-        @media (max-width: 600px) {
-            h1 { font-size: 1.5em; }
-            .main-content { padding: 30px 15px; }
-        }
+        footer { text-align: center !important; padding: 60px 0; color: #aaa; }
     </style>
 </head>
 <body>
 
-<div class="main-content">
+<div class="wrapper">
     <header>
-        <span class="category">FOOD & DRINK</span>
-        <h1>【実食レポ】MAMEIL（マメイル）生チョコマカロン。<br>168時間を1粒に込めた、狂気的な完成度。</h1>
+        <span style="color: #d98880; font-weight: bold; letter-spacing: 2px;">LUXURY GOURMET</span>
+        <h1>【実食】MAMEIL（マメイル）生チョコマカロン。<br>168時間を1粒に込めた、狂気的な完成度。</h1>
+        <p style="color: #999; font-size: 0.9em; text-align: center !important;">2026.02.11 — MOKUMOKU</p>
     </header>
 
-    <div class="lead-text">
+    <div class="intro-box">
         「マカロンなんて、どこも同じでしょ？」<br>
-        そう思っていた私の先入観は、この1粒で鮮やかに打ち砕かれました。MAMEIL（マメイル）が提供するのは、もはやお菓子の枠を超えた「カカオへの没入体験」。1週間という時間を閉じ込めた、贅沢の極みとも言えるその実態をレポートします。
+        そう思っていた私の先入観は、この1粒で鮮やかに打ち砕かれました。MAMEIL（マメイル）が提供するのは、お菓子の枠を超えた「カカオへの没入体験」。1週間という時間を閉じ込めた、贅沢の極みとも言える実態をレポートします。
     </div>
 
     <h2>1. 口内で完成する、一瞬の「魔法」</h2>
     <p>口へ運んだ瞬間、まず驚くのはその食感のコントラストです。繊細なマカロン生地が「ホロリ」と解けたかと思えば、直後に<span class="highlight">濃厚な生チョコが体温で一気に「とろり」と解放されます。</span></p>
-    <p>これは一般的な「ガナッシュ入りマカロン」では絶対に体験できません。Bean to Barで丁寧に練り上げられた生チョコだからこそ成し得る、圧倒的な口溶けの解像度。カカオの心地よい酸味と、上品な甘い余韻だけが残り、その「引き際の美しさ」までもが綿密に計算されているかのようです。</p>
+    <p>Bean to Barで丁寧に練り上げられた生チョコだからこそ成し得る、圧倒的な口溶け。カカオの心地よい酸味と上品な甘い余韻だけが残り、その「引き際の美しさ」までもが綿密に計算されているかのようです。</p>
 
     <h2>2. 常識を置き去りにする「1cmの生チョコ断面」</h2>
-    <p>MAMEILの最大の特徴、それは主役がマカロンではなく「生チョコ」であること。断面を見れば一目瞭然です。<span class="highlight">約1cmという規格外の厚みで挟まれた生チョコ</span>は、3カ国のカカオ豆を絶妙に配合し、最高の結果を出すためだけに設計されています。</p>
-    <p>歯を立てた瞬間に感じるわずかな抵抗感。それが生チョコの柔らかさに屈する時、あなたはこれまでのお菓子の概念が崩れ去るのを感じるはずです。この「究極の一口」のために注がれた手間暇は、もはや芸術品の域に達しています。</p>
-
-    <h2>3. 香りから始まる「カカオへの没入感」</h2>
-    <p>MAMEILの凄みは、食べる前から始まっています。箱を開けた瞬間、敷き詰められた<span class="highlight">カカオハスク（豆の殻）から溢れ出す、深く芳醇な香り</span>が部屋中に広がるのです。</p>
-    <p>これまでのマカロンにはなかった「嗅覚」による究極の演出。五感すべてを「最高」で満たすための設計です。味覚だけでなく、香りまでもがあなたを非日常の世界へ連れ去ってくれます。頑張った自分への、これ以上ないほど甘い「正解」がここにあります。</p>
-
-    <h2>4. 1粒のために捧げられた「168時間」の価値</h2>
-    <p>効率を求める時代に、MAMEILはあえて逆走します。カカオ豆の選別から、焙煎の温度管理、そして熟成。マカロンの焼き上がりまで、<span class="highlight">費やす時間は延べ1週間。</span></p>
-    <p>大量生産では絶対に辿り着けない、香り・酸味・甘みの絶妙なアンサンブル。これこそが、情熱の結晶。一口食べれば、その価格の理由が、言葉ではなく魂で理解できるはずです。</p>
+    <p>MAMEILの主役はマカロンではなく「生チョコ」です。断面を見れば一目瞭然。<span class="highlight">約1cmという規格外の厚み</span>で挟まれた生チョコは、3カ国のカカオ豆を絶妙な比率で配合し、最高の結果を出すためだけに設計されています。視覚で驚き、食感で恋に落ちる。この「究極の一口」のために注がれた手間暇は、もはや芸術品の域に達しています。</p>
 
     <h2>愛好家たちが語る、MAMEILの口コミ</h2>
-    <div class="review-container">
-        <div class="review-item">
-            <div class="review-stars">★★★★★</div>
-            <p>「マカロンというより、最高級の生チョコを食べている感覚。自分への最高のご褒美です。」</p>
-            <span class="review-user">30代 女性</span>
-        </div>
-        <div class="review-item">
-            <div class="review-stars">★★★★★</div>
-            <p>「妻の誕生日に。15分待ってから食べると、中のチョコがとろけて絶品だと喜んでくれました。」</p>
-            <span class="review-user">40代 男性</span>
-        </div>
-        <div class="review-item">
-            <div class="review-stars">★★★★★</div>
-            <p>「ピスタチオの濃厚さがすごい！豆そのものの香ばしさがチョコと混ざり合って、多幸感が凄まじいです。」</p>
-            <span class="review-user">20代 女性</span>
-        </div>
+    <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>「マカロンというより、最高級の生チョコを食べている感覚。自分への最高のご褒美です。」</p>
+        <p class="user-name">30代 女性</p>
+    </div>
+    <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>「妻の誕生日に。パッケージの高級感からして別格。15分待ってから食べると、中のチョコがとろけて絶品だと喜んでくれました。」</p>
+        <p class="user-name">40代 男性</p>
     </div>
 
-    <div style="background-color: #fdf2f2; padding: 25px; border-radius: 8px; border: 1px dashed #d98880;">
+    <div style="background-color: #fdf2f2; padding: 25px; border-radius: 8px; border: 1px dashed #d98880; margin: 40px 0;">
         <p style="font-weight: bold; margin-bottom: 10px;">実食してわかった「最高の食べ時」</p>
-        冷蔵庫から出してすぐはチョコが少し硬めです。そのままでも美味しいですが、<span class="highlight">15分〜20分ほど常温に置いたタイミング</span>がベスト。生チョコが滑らかに口の中で踊り出します。
+        冷蔵庫から出してすぐはチョコが少し硬めです。そのままでも美味しいですが、<span class="highlight">15分〜20分ほど常温に置いたタイミング</span>がベスト。生チョコが最も滑らかに口の中で踊り出します。
     </div>
 
-    <div style="text-align: center; margin: 50px 0;">
+    <div style="text-align: center !important; margin: 50px 0;">
         <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+C3QQ9" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=260208736947&wid=001&eno=01&mid=s00000023513002033000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4AX6CG+FNTINM+51FE+C3QQ9" alt="">
     </div>
 
-    <div class="cta-area">
-        <h3 style="margin-top: 0;">この感動に、出会う準備はできていますか？</h3>
-        <p>たった一粒が、あなたの「お菓子」の概念を変える。</p>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+BWVTE" rel="nofollow" class="btn">MAMEIL公式サイトを見る</a>
+    <div class="cta-container">
+        <h3 style="color: #fff; text-align: center !important; margin-top: 0;">この感動に、出会う準備はできていますか？</h3>
+        <p style="text-align: center !important;">たった一粒が、あなたの「お菓子」の概念を変える。</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AX6CG+FNTINM+51FE+BWVTE" rel="nofollow" class="btn-link">MAMEIL公式サイトを見る</a>
+        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4AX6CG+FNTINM+51FE+BWVTE" alt="">
     </div>
 
     <footer>
