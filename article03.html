@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 基本設定：確実に上から下へ流れるように設定 */
+        /* 確実に上から下へ、横書きで表示する設定 */
         body { 
             background-color: #fafafa; 
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             margin: 0; 
             color: #333; 
             line-height: 1.8;
-            writing-mode: horizontal-tb; /* 確実に横書き・上から下へ流れる設定 */
+            writing-mode: horizontal-tb;
         }
         
         .container { 
             max-width: 800px; 
             margin: 0 auto; 
             padding: 60px 20px;
-            display: block; /* 縦に並ぶように明示 */
+            display: block;
         }
 
         .post-header { 
@@ -45,17 +45,22 @@
             margin: 0; 
             line-height: 1.4;
             display: block;
+            word-break: normal;
         }
 
+        /* 画像の設定：そのままのサイズで表示 */
         .main-visual { 
             width: 100%; 
             height: auto; 
             border-radius: 15px; 
             margin-bottom: 50px;
             display: block;
+            transition: opacity 0.3s;
+        }
+        .main-visual:hover {
+            opacity: 0.9;
         }
 
-        /* 濃厚シャドウカード */
         .rich-card { 
             background: #fff; 
             padding: 40px; 
@@ -79,6 +84,7 @@
             margin-bottom: 25px; 
             font-size: 1.1em;
             display: block;
+            text-align: left;
         }
 
         .highlight { 
@@ -107,6 +113,9 @@
             margin-top: 25px;
             transition: 0.3s;
         }
+        .btn-buy:hover {
+            transform: scale(1.05);
+        }
 
         footer {
             text-align: center; 
@@ -117,7 +126,6 @@
             letter-spacing: 3px;
         }
 
-        /* モバイル対応 */
         @media (max-width: 600px) {
             .post-title { font-size: 1.6em; }
             .container { padding: 40px 15px; }
@@ -131,17 +139,17 @@
             <span class="post-category">FOOD & DRINK</span>
             <h1 class="post-title">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロンが最高すぎる！</h1>
             <p style="color: #888; font-size: 0.9em; margin-top: 20px;">2026.02.11 — MOKUMOKU</p>
-    </header>
+        </header>
 
-    <a href="https://mameil.com/" target="_blank" style="display: block; text-decoration: none;">
-        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=1200&q=80" class="main-visual" alt="MAMEIL マカロン（公式サイトへ）" style="cursor: pointer; display: block;">
-    </a>
+        <a href="https://mameil.com/" target="_blank" style="display: block; text-decoration: none;">
+            <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=1200&q=80" class="main-visual" alt="MAMEIL マカロン（公式サイトへ）">
+        </a>
 
-    <div class="rich-card">
+        <div class="rich-card">
             <p>「マカロンなんて、どれも同じでしょ？」<br>もしそう思っているなら、MAMEIL（マメイル）はその先入観を鮮やかに裏切ってくれます。これは単なるお菓子ではなく、1週間という時間を閉じ込めた「体験」そのものでした。</p>
         </div>
 
-        <h2>1. マカロンの概念を覆す、その「1cmの厚み」</h2>
+        <h2>1. マカロンの概念を覆す、その「1cm의 厚み」</h2>
         <p>ひと口噛んだ瞬間、繊細なマカロン生地がホロリと崩れ、中から現れるのは驚くほど濃厚な生チョコ。<span class="highlight">一般的な「チョコ味のクリーム」ではありません。</span>カカオ豆から1週間かけて手作りされた、本物の「生チョコ」が主役です。</p>
         <p>この圧倒的なボリューム感と、とろける口溶けのコントラスト。一度知ってしまったら、もう普通のマカロンには戻れないかもしれません。視覚で驚き、食感で恋に落ちる。そんな「究極の断面」がそこにあります。</p>
 
