@@ -10,7 +10,7 @@
         article, body {
             writing-mode: horizontal-tb !important;
             font-family: 'Noto Serif JP', serif;
-            line-height: 2;
+            line-height: 2.2; /* 読みやすさを考慮したゆったりした行間 */
             color: #333;
             background-color: #fff;
             margin: 0;
@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 80px 20px;
         }
@@ -30,16 +30,16 @@
             height: auto;
             margin: 60px auto;
             border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
         }
 
         h2 {
-            font-size: 1.8em;
-            border-left: 5px solid #76a08a;
+            font-size: 1.7em;
+            border-left: 5px solid #76a08a; /* おすすめ（RECOMMEND）カラー */
             padding-left: 20px;
             margin: 100px 0 40px;
             letter-spacing: 0.1em;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         p { margin-bottom: 35px; }
@@ -51,7 +51,7 @@
             padding: 60px 40px;
             margin-bottom: 80px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
         }
 
         /* アドバイス枠（ゴールド系） */
@@ -64,7 +64,7 @@
         }
 
         .advice-box::before {
-            content: "EXPERTS COLUMN";
+            content: "ADVICE";
             position: absolute;
             top: -12px;
             left: 20px;
@@ -94,12 +94,11 @@
             letter-spacing: 2px;
             transition: 0.4s;
             margin-bottom: 35px;
-            border-radius: 2px;
         }
 
         .btn-official:hover { background: #000; transform: translateY(-3px); }
         
-        ul { padding-left: 20px; margin-bottom: 35px; list-style-type: none; }
+        ul { padding-left: 20px; margin-bottom: 35px; list-style: none; }
         li { margin-bottom: 15px; position: relative; padding-left: 20px; }
         li::before { content: "・"; position: absolute; left: 0; color: #76a08a; font-weight: bold; }
     </style>
@@ -112,7 +111,7 @@
             <p>なんとなく感じる「肌の変化」に、気づいていますか</p>
             <p>20代の頃は、少し寝不足でもすぐ戻っていた肌。<br>シンプルなケアでも、十分うるおっていたはずなのに。</p>
             <p>30代に入ってから、こんな変化を感じることはありませんか。</p>
-            <p style="font-weight: bold; color: #76a08a; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 20px 0; margin: 30px 0;">
+            <p style="color: #76a08a; font-weight: bold;">
                 朝のメイク前、鏡を見たときの印象が少し違う<br>
                 乾燥していないのに、どこかツヤが足りない<br>
                 肌のコンディションに波が出てきた<br>
@@ -127,12 +126,12 @@
             <p>その状態では、どんなに保湿しても時間が経つと乾いた印象に戻ってしまいます。だからこそ重要なのは、肌にうるおいを与えるだけでなく、角層のすみずみまで行き渡る環境を整えること。軽やかさと密度を両立したケアが、肌のコンディションを底上げします。</p>
         </section>
 
-        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80" alt="Skin Care Moment" class="post-image">
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80" alt="Skin Care Concept" class="post-image">
 
         <section>
             <h2>忙しい毎日でも続けられることが、美しさをつくる</h2>
-            <p>仕事、家事、プライベート。30代は、生活のバランスを取りながら自分の時間を確保するのが難しい時期です。スキンケアも、本当は丁寧にやりたい。でも現実は、時間との戦い。</p>
-            <p>だからこそ必要なのは、短時間でも満足感のあるケア。肌になじませた瞬間に広がるうるおい感。ベタつかず、次のステップを邪魔しない軽やかさ。朝のメイク前にも、夜のリラックスタイムにも、ストレスなく使える心地よさを大切にしています。</p>
+            <p>仕事、家事、プライベート。30代は、生活のバランスを取りながら自分の時間を確保するのが難しい時期です。</p>
+            <p>スキンケアも、本当は丁寧にやりたい。でも現実は、時間との戦い。だからこそ必要なのは、短時間でも満足感のあるケア。肌になじませた瞬間に広がるうるおい感。ベタつかず、次のステップを邪魔しない軽やかさ。朝のメイク前にも、夜のリラックスタイムにも、ストレスなく使える心地よさを大切にしています。</p>
         </section>
 
         <section>
@@ -146,34 +145,33 @@
             <p>過度なケアをしなくても、ベースが整うことで印象は大きく変わります。「最近肌の調子いいね」と言われるような、さりげない変化を目指した設計です。</p>
         </section>
 
-        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=1200&q=80" alt="Pure Water Texture" class="post-image">
+        <section>
+            <h2>スキンケアに求めるものが変わる年代</h2>
+            <p>20代は、トレンドや即効性を重視しがち。30代になると、選ぶ基準は少し変わります。続けられること、肌に負担を感じにくいこと、季節や体調に左右されにくいこと、シンプルでも手応えがあること。</p>
+            <p>派手さよりも、安定感。一時的な変化より、長く付き合える安心感。そんな視点で設計されたケアは、日常に自然と溶け込みます。</p>
+        </section>
+
+        <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&w=1200&q=80" alt="Water Texture" class="post-image">
 
         <section>
+            <h2>余計なことをしないという選択</h2>
+            <p>肌がゆらぎやすい時期だからこそ、必要以上に与えすぎないことも重要です。ステップが多すぎるケアは、時間だけでなく肌への負担にもつながります。必要なものを、必要な形で。シンプルな設計は、肌本来のコンディションを引き出す近道です。</p>
+
             <h2>肌が整うと、自分への向き合い方も変わる</h2>
-            <p>肌の状態は、気分に大きく影響します。コンディションが良い日は、服選びもメイクも自然と前向きになる。人と会う予定が楽しみになる、写真に写る自分に自信が持てる、何気ない日常が少し心地よく感じる。</p>
-            <p>スキンケアは、単なる美容習慣ではなく、日々の気分を整える時間でもあります。今の肌にやさしく向き合いながら、これからの自分に心地よいケアを。触れるたびに感じるうるおいとやわらかさを、毎日の習慣にしてみてください。</p>
+            <p>肌の状態は、気分に大きく影響します。コンディションが良い日は、服選びもメイクも自然と前向きになる。人と会う予定が楽しみになる、写真に写る自分に自信が持てる、何気ない日常が少し心地よく感じる。スキンケアは、単なる美容習慣ではなく、日々の気分を整える時間でもあります。</p>
         </section>
 
         <div class="advice-box">
-            <p><strong>Expert Advice：未来の肌のために</strong></p>
-            <p>30代は、これからの肌を左右する大切な時期。特別なケアよりも、毎日続く習慣が重要になります。高価なアイテムを増やすより、肌に合うシンプルなケアを継続する。その積み重ねが、数年後の肌印象を大きく変えていきます。</p>
-            <p>慌ただしい一日の中で、スキンケアの時間は数分かもしれません。それでも、肌に触れるその時間は、自分を整える大切なひとときです。</p>
+            <p><strong>Expert Advice：こんな悩みを持つ方に</strong></p>
+            <p>スキンケアの効果を感じにくくなった / 乾燥していないのにツヤが足りない / 季節の変わり目にゆらぎやすい / シンプルケアに切り替えたい / ベタつきが苦手 / 忙しくても肌を整えたい</p>
+            <p>30代の肌悩みは、複合的で言葉にしにくいもの。だからこそ、日常の中で自然に続けられるケアが必要です。大きな変化ではなく、「気づけば調子がいい」という安定感こそが、長く付き合えるケアの証です。</p>
         </div>
 
-        <footer class="cta-area">
-            <p><strong>今日の選択が、明日の肌をつくる</strong></p>
-            <p>何を使うか、どう続けるか。その小さな選択の積み重ねが、未来の印象を形づくります。</p>
-            <a href="https://px.a8.net/svt/ejp?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" rel="nofollow" class="btn-official">詳細を公式サイトで見る</a>
-            
-            <div class="banner">
-                <a href="https://px.a8.net/svt/ejp?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" rel="nofollow">
-                    <img border="0" width="300" height="250" alt="スキンケアバナー" src="https://www24.a8.net/svt/bgt?aid=260219822445&wid=001&eno=01&mid=s00000027206001003000&mc=1">
-                </a>
-                <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" alt="" style="display:none;">
-            </div>
-        </footer>
-    </article>
-</div>
+        <section>
+            <h2>未来の肌のために、今できること</h2>
+            <p>30代は、これからの肌を左右する大切な時期。特別なケアよりも、毎日続く習慣が重要になります。高価なアイテムを増やすより、肌に合うシンプルなケアを継続する。その積み重ねが、数年後の肌印象を大きく変えていきます。</p>
+            <p>自分のための時間を、ほんの少しだけ。肌に触れるその時間は、自分を整える大切なひととき。無理をしない。頑張りすぎない。それでもきちんと応えてくれるケアが、毎日の安心につながります。</p>
+        </section>
 
-</body>
-</html>
+        <footer class="cta-area">
+            <p><strong>今日の選択
