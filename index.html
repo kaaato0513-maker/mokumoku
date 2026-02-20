@@ -3,81 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心にうるおいを。日常の中の癒やし | MOKUMOKU</title>
+    <title>MOKUMOKU 生活の質を上げる、好きなもの、必要なものを届ける</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 完全横書き固定 */
-        article, body {
-            writing-mode: horizontal-tb !important;
-            font-family: 'Noto Serif JP', serif;
-            line-height: 2.2;
-            color: #333;
-            background-color: #fff;
-            margin: 0;
-            padding: 0;
+        /* 共通設定：完全横書き固定 */
+        body { 
+            writing-mode: horizontal-tb !important; 
+            font-family: sans-serif; 
+            margin: 0; 
+            background-color: #fafafa; 
+            color: #333; 
+            line-height: 1.8; 
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .post-image {
-            display: block;
-            width: 80%; /* 視認性を高めるためサイズを調整 */
-            height: auto;
-            margin: 60px auto;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            font-size: 1.7em;
-            border-left: 5px solid #76a08a;
-            padding-left: 20px;
-            margin: 100px 0 40px;
-            letter-spacing: 0.1em;
-        }
-
-        p { margin-bottom: 35px; }
-
-        .cta-area {
-            text-align: center;
-            background: #f9f9f9;
-            padding: 80px 20px;
-            margin-top: 120px;
+        
+        /* カテゴリーボタン */
+        .cat-btn {
+            text-decoration: none;
+            color: #fff;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .cat-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+            opacity: 0.9;
+        }
+        .cat-btn span { font-size: 0.7em; margin-top: 5px; font-weight: normal; opacity: 0.8; }
+        
+        .btn-recommend { background: #76a08a; }
+        .btn-lifestyle { background: #5d6d7e; }
+        .btn-investment { background: #a98b73; }
+        .btn-food { background: #d98880; }
+
+        /* 記事カード */
+        .article-card {
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            transition: 0.3s;
+            display: block;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        /* メイン記事用の深い影 */
+        .rich-shadow { box-shadow: 0 35px 70px rgba(0,0,0,0.15) !important; }
+
+        /* レイアウト */
+        .content-wrapper { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
+        .main-content { flex: 1; min-width: 300px; }
+        .sidebar { width: 320px; min-width: 300px; }
+        
+        @media(max-width: 850px) {
+            .sidebar { width: 100%; }
+            .content-wrapper { gap: 20px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <article>
-        <header>
-            <h1 style="font-size: 2.2em; text-align: center; margin-bottom: 60px;">心にうるおいを。日常の中の癒やし</h1>
-        </header>
+<header style="position:relative; height:350px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-image:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center; filter:brightness(0.8);"></div>
+    <div style="position:relative; z-index:1; text-align:center;">
+        <h1 style="font-family:'Noto Serif JP',serif; font-size:3em; letter-spacing:10px; margin:0; color:#fff;">MOKUMOKU</h1>
+    </div>
+</header>
 
-        <section>
-            <h2>ふとした瞬間に救われる、かけがえのない存在</h2>
-            <p>忙しい日々の中で、私たちは知らず知らずのうちに心をすり減らしています。そんな時、ただそこにいてくれるだけで、すべてをリセットしてくれる存在。言葉は交わせなくても、その温もりや無邪気な仕草が、何よりの特効薬になることがあります。</p>
-        </section>
+<div style="max-width:1100px; margin:20px auto 100px; position:relative; z-index:2; padding:0 20px;">
+    <div class="content-wrapper">
+        <main class="main-content">
+            <h2 style="font-size:0.8em; letter-spacing:2px; color:#888; margin-bottom:20px;">LATEST POST</h2>
+            
+            <a href="article04.html" class="article-card rich-shadow" style="margin-bottom:40px; border:none;">
+                <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?auto=compress&cs=tinysrgb&w=1000" 
+                     style="width:100%; height:320px; object-fit:cover;" 
+                     alt="30代からのスキンケア">
+                
+                <div style="padding:30px;">
+                    <span style="color:#76a08a; font-weight:bold; font-size:0.7em;">RECOMMEND</span>
+                    <h3 style="font-family:'Noto Serif JP',serif; font-size:1.6em; margin:15px 0;">30代からの「巡らせる」スキンケア。未来の肌を整えるシンプルな習慣</h3>
+                    <p style="color:#999; font-size:0.85em;">2026.02.20 — おすすめ</p>
+                </div>
+            </a>
+        </main>
 
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/7580623557902731262_0" alt="癒やしの猫" class="post-image">
+        <aside class="sidebar">
+            <div class="rich-shadow" style="background:#fff; border-radius:12px; padding:40px 30px; text-align:center; margin-top:40px; border:none;">
+                <div style="width:140px; height:140px; margin:0 auto 25px; border-radius:50%; overflow:hidden; border:5px solid #fff; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+                    <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="MOKUMOKU Icon" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h4 style="font-family:'Noto Serif JP',serif; margin:0; font-size:1.4em; letter-spacing:1.5px;">MOKUMOKU</h4>
+                <p style="font-size:0.75em; color:#999; margin-bottom:25px; letter-spacing:2px;">Editor</p>
+                <p style="font-size:0.85em; color:#555; text-align:left; line-height:2;">
+                    「黙々（もくもく）」と一つのことに没頭し、集中する。それは時に視野を狭めるように見えますが、何事も成長し変化を成し遂げるには、必要なプロセスだと考えています。<br><br>
+                    自身の生活をより良く変えていく過程を発信することで、見てくださる方々の生活の助けにもなれば。そんな願いを込めて、日々を綴っています。
+                </p>
+            </div>
+        </aside>
+    </div>
 
-        <section>
-            <h2>「黙々」と過ごす時間の中に、癒やしを</h2>
-            <p>何かに没頭することも大切ですが、何も考えずにただ眺める時間も、同じくらい大切です。柔らかな毛並みに触れ、穏やかな寝顔を見る。そんな贅沢な時間が、明日への活力を養ってくれます。MOKUMOKUでは、そんな暮らしの「質」を上げる瞬間も大切に記録していきたいと考えています。</p>
-        </section>
+    <section style="margin:80px 0;">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4em; border-bottom:2px solid #333; padding-bottom:12px; margin-bottom:35px; letter-spacing:1px;">Categories</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+            <a href="recommend.html" class="cat-btn btn-recommend">おすすめ<span>Recommend</span></a>
+            <a href="lifestyle.html" class="cat-btn btn-lifestyle">暮らし<span>Lifestyle</span></a>
+            <a href="investment.html" class="cat-btn btn-investment">投資<span>Investment</span></a>
+            <a href="food.html" class="cat-btn btn-food">食事飲み物<span>Food & Drink</span></a>
+        </div>
+    </section>
 
-        <footer class="cta-area">
-            <p><strong>今日の癒やしが、明日の活力になる</strong></p>
-            <p>あなたの暮らしにも、小さな幸せが溢れますように。</p>
-            <a href="index.html" style="color: #76a08a; font-weight: bold; text-decoration: none;">← Homeへ戻る</a>
-        </footer>
-    </article>
+    <section style="margin-top:100px;">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4em; border-bottom:2px solid #333; padding-bottom:12px; margin-bottom:35px; letter-spacing:1px;">Past Articles</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:30px;">
+            <a href="article03.html" class="article-card">
+                <img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <span style="color:#d98880; font-weight:bold; font-size:0.65em;">FOOD & DRINK</span>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロン</h4>
+                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.11</p>
+                </div>
+            </a>
+            <a href="article02.html" class="article-card">
+                <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <span style="color:#5d6d7e; font-weight:bold; font-size:0.65em;">LIFESTYLE</span>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">「寝返り」が人生を変える。NELLマットレス完全ガイド</h4>
+                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.07</p>
+                </div>
+            </a>
+            <a href="article01.html" class="article-card">
+                <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <span style="color:#a98b73; font-weight:bold; font-size:0.65em;">INVESTMENT</span>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">副業ブログの第一歩！A8.netで収益を作る方法</h4>
+                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.06</p>
+                </div>
+            </a>
+        </div>
+    </section>
 </div>
+
+<footer style="text-align:center; padding:100px 0; background:#222; color:#666; font-size:0.75em; letter-spacing:3px;">
+    © 2026 MOKUMOKU.
+</footer>
 
 </body>
 </html>
