@@ -9,152 +9,151 @@
         /* 共通設定：完全横書き固定 */
         body { 
             writing-mode: horizontal-tb !important; 
-            font-family: sans-serif; 
+            font-family: 'Noto Serif JP', serif; 
             margin: 0; 
-            background-color: #fafafa; 
+            background-color: #f5f5f5; 
             color: #333; 
             line-height: 1.8; 
         }
         
-        /* カテゴリーボタン */
-        .cat-btn {
-            text-decoration: none;
-            color: #fff;
-            height: 100px;
+        /* ヘッダー */
+        header {
+            position: relative;
+            height: 450px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        header h1 { font-size: 4em; letter-spacing: 12px; margin: 0; }
+        header p { font-size: 1.1em; letter-spacing: 4px; margin-top: 10px; opacity: 0.9; }
+
+        /* カテゴリーナビ */
+        .cat-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: -30px auto 40px;
+            position: relative;
+            z-index: 10;
+        }
+        .cat-btn {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 0.8em;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
-        .cat-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-            opacity: 0.9;
-        }
-        .cat-btn span { font-size: 0.7em; margin-top: 5px; font-weight: normal; opacity: 0.8; }
-        
         .btn-recommend { background: #76a08a; }
         .btn-lifestyle { background: #5d6d7e; }
         .btn-investment { background: #a98b73; }
         .btn-food { background: #d98880; }
 
+        /* レイアウト */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; gap: 30px; }
+        main { flex: 3; }
+        aside { flex: 1; min-width: 300px; }
+
         /* 記事カード */
+        .section-title { font-size: 0.9em; color: #888; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
         .article-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
             text-decoration: none;
             color: inherit;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #fff;
-            transition: 0.3s;
             display: block;
+            transition: 0.3s;
         }
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        /* メイン記事用の深い影 */
-        .rich-shadow { box-shadow: 0 35px 70px rgba(0,0,0,0.15) !important; }
+        .article-card:hover { transform: translateY(-5px); }
+        .article-card img { width: 100%; height: 350px; object-fit: cover; }
+        .card-body { padding: 30px; }
+        .card-cat { color: #76a08a; font-weight: bold; font-size: 0.7em; }
+        .card-body h3 { font-size: 1.5em; margin: 15px 0; line-height: 1.4; }
+        .card-body p { color: #999; font-size: 0.8em; }
 
-        /* レイアウト */
-        .content-wrapper { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
-        .main-content { flex: 1; min-width: 300px; }
-        .sidebar { width: 320px; min-width: 300px; }
-        
-        @media(max-width: 850px) {
-            .sidebar { width: 100%; }
-            .content-wrapper { gap: 20px; }
+        /* サイドバー：プロフィール（イメージ画像に寄せたスタイル） */
+        .profile-card {
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .profile-icon {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #f0f0f0;
+        }
+        .profile-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-card h4 { margin: 10px 0 5px; font-size: 1.3em; }
+        .profile-card .job { color: #999; font-size: 0.7em; letter-spacing: 2px; margin-bottom: 20px; display: block; }
+        .profile-card .bio { font-size: 0.85em; color: #555; text-align: left; line-height: 1.8; }
+
+        @media (max-width: 900px) {
+            .container { flex-direction: column; }
+            aside { order: 2; }
         }
     </style>
 </head>
 <body>
 
-<header style="position:relative; height:350px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-image:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center; filter:brightness(0.8);"></div>
-    <div style="position:relative; z-index:1; text-align:center;">
-        <h1 style="font-family:'Noto Serif JP',serif; font-size:3em; letter-spacing:10px; margin:0; color:#fff;">MOKUMOKU</h1>
-    </div>
+<header>
+    <h1>MOKUMOKU</h1>
+    <p>生活の質を飾る、好きなものを届ける</p>
 </header>
 
-<div style="max-width:1100px; margin:20px auto 100px; position:relative; z-index:2; padding:0 20px;">
-    <div class="content-wrapper">
-        <main class="main-content">
-            <h2 style="font-size:0.8em; letter-spacing:2px; color:#888; margin-bottom:20px;">LATEST POST</h2>
-            
-            <a href="article04.html" class="article-card rich-shadow" style="margin-bottom:40px; border:none;">
-                <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?auto=compress&cs=tinysrgb&w=1000" 
-                     style="width:100%; height:320px; object-fit:cover;" 
-                     alt="30代からのスキンケア">
-                
-                <div style="padding:30px;">
-                    <span style="color:#76a08a; font-weight:bold; font-size:0.7em;">RECOMMEND</span>
-                    <h3 style="font-family:'Noto Serif JP',serif; font-size:1.6em; margin:15px 0;">30代からの「巡らせる」スキンケア。未来の肌を整えるシンプルな習慣</h3>
-                    <p style="color:#999; font-size:0.85em;">2026.02.20 — おすすめ</p>
-                </div>
-            </a>
-        </main>
-
-        <aside class="sidebar">
-            <div class="rich-shadow" style="background:#fff; border-radius:12px; padding:40px 30px; text-align:center; margin-top:40px; border:none;">
-                <div style="width:140px; height:140px; margin:0 auto 25px; border-radius:50%; overflow:hidden; border:5px solid #fff; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
-                    <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="MOKUMOKU Icon" style="width:100%; height:100%; object-fit:cover;">
-                </div>
-                <h4 style="font-family:'Noto Serif JP',serif; margin:0; font-size:1.4em; letter-spacing:1.5px;">MOKUMOKU</h4>
-                <p style="font-size:0.75em; color:#999; margin-bottom:25px; letter-spacing:2px;">Editor</p>
-                <p style="font-size:0.85em; color:#555; text-align:left; line-height:2;">
-                    「黙々（もくもく）」と一つのことに没頭し、集中する。それは時に視野を狭めるように見えますが、何事も成長し変化を成し遂げるには、必要なプロセスだと考えています。<br><br>
-                    自身の生活をより良く変えていく過程を発信することで、見てくださる方々の生活の助けにもなれば。そんな願いを込めて、日々を綴っています。
-                </p>
-            </div>
-        </aside>
-    </div>
-
-    <section style="margin:80px 0;">
-        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4em; border-bottom:2px solid #333; padding-bottom:12px; margin-bottom:35px; letter-spacing:1px;">Categories</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
-            <a href="recommend.html" class="cat-btn btn-recommend">おすすめ<span>Recommend</span></a>
-            <a href="lifestyle.html" class="cat-btn btn-lifestyle">暮らし<span>Lifestyle</span></a>
-            <a href="investment.html" class="cat-btn btn-investment">投資<span>Investment</span></a>
-            <a href="food.html" class="cat-btn btn-food">食事飲み物<span>Food & Drink</span></a>
-        </div>
-    </section>
-
-    <section style="margin-top:100px;">
-        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4em; border-bottom:2px solid #333; padding-bottom:12px; margin-bottom:35px; letter-spacing:1px;">Past Articles</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:30px;">
-            <a href="article03.html" class="article-card">
-                <img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <span style="color:#d98880; font-weight:bold; font-size:0.65em;">FOOD & DRINK</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロン</h4>
-                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.11</p>
-                </div>
-            </a>
-            <a href="article02.html" class="article-card">
-                <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <span style="color:#5d6d7e; font-weight:bold; font-size:0.65em;">LIFESTYLE</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">「寝返り」が人生を変える。NELLマットレス完全ガイド</h4>
-                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.07</p>
-                </div>
-            </a>
-            <a href="article01.html" class="article-card">
-                <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <span style="color:#a98b73; font-weight:bold; font-size:0.65em;">INVESTMENT</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">副業ブログの第一歩！A8.netで収益を作る方法</h4>
-                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.06</p>
-                </div>
-            </a>
-        </div>
-    </section>
+<div class="cat-nav">
+    <a href="recommend.html" class="cat-btn btn-recommend">RECOMMEND</a>
+    <a href="lifestyle.html" class="cat-btn btn-lifestyle">LIFESTYLE</a>
+    <a href="investment.html" class="cat-btn btn-investment">INVESTMENT</a>
+    <a href="food.html" class="cat-btn btn-food">FOOD</a>
 </div>
 
-<footer style="text-align:center; padding:100px 0; background:#222; color:#666; font-size:0.75em; letter-spacing:3px;">
+<div class="container">
+    <main>
+        <div class="section-title">LATEST POST</div>
+        
+        <a href="article04.html" class="article-card">
+            <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="スキンケア">
+            <div class="card-body">
+                <span class="card-cat">RECOMMEND</span>
+                <h3>30代からの「巡らせる」スキンケア。未来の肌を整えるシンプルな習慣</h3>
+                <p>2026.02.20 — おすすめ</p>
+            </div>
+        </a>
+
+        </main>
+
+    <aside>
+        <div class="section-title">PROFILE</div>
+        <div class="profile-card">
+            <div class="profile-icon">
+                <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400" alt="猫のアイコン">
+            </div>
+            <h4>MOKUMOKU</h4>
+            <span class="job">Editor</span>
+            <p class="bio">
+                「黙々」と没頭し、集中する時間は成長に必要なプロセス。日々の生活をより良く変えていく過程を発信し、見てくださる方の助けになればと願っています。
+            </p>
+        </div>
+    </aside>
+</div>
+
+<footer style="text-align:center; padding:80px 0; color:#999; font-size:0.8em; letter-spacing:3px;">
     © 2026 MOKUMOKU.
 </footer>
 
