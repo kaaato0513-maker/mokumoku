@@ -2,19 +2,43 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>投資 | MOKUMOKU</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTMENT - MOKUMOKU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { writing-mode: horizontal-tb !important; font-family: sans-serif; margin: 0; background-color: #fafafa; color: #333; line-height: 1.8; }
+        header { background: #a98b73; padding: 60px 20px; text-align: center; color: #fff; }
+        header h1 { font-family: 'Noto Serif JP', serif; font-size: 2.5em; letter-spacing: 5px; margin: 0; }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .category-label { display: inline-block; background: #a98b73; color: #fff; padding: 5px 15px; font-size: 0.75em; font-weight: bold; border-radius: 2px; margin-bottom: 15px; }
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
+        .article-card { text-decoration: none; color: inherit; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .article-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .article-card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-content h2 { font-family: 'Noto Serif JP', serif; font-size: 1.3em; margin: 0 0 15px; line-height: 1.5; }
+        .card-content p { font-size: 0.85em; color: #bbb; margin: 0; }
+        .back-home { display: block; text-align: center; margin-top: 80px; text-decoration: none; color: #a98b73; font-weight: bold; }
+    </style>
 </head>
-<body style="background:#fafafa; font-family:sans-serif; margin:0; padding:40px 20px; color:#333;">
-    <div style="max-width:800px; margin:0 auto;">
-        <a href="index.html" style="text-decoration:none; color:#999; font-size:0.9em;">← HOME</a>
-        <h1 style="font-family:serif; border-bottom:2px solid #333; padding-bottom:15px; margin-top:20px;">投資 / Investment</h1>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:25px; margin-top:40px;">
-            <a href="article01.html" style="text-decoration:none; color:inherit; border:1px solid #eee; background:#fff; border-radius:8px; overflow:hidden; display:block;">
-                <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" style="width:100%; height:180px; object-fit:cover;">
-                <div style="padding:20px;"><h4>A8.netでブログ収益化の第一歩</h4><p style="font-size:0.8em; color:#bbb; margin-top:10px;">2026.02.06</p></div>
-            </a>
-        </div>
+<body>
+<header>
+    <h1>INVESTMENT</h1>
+    <p style="margin-top:10px; opacity:0.9;">未来を創る、知識と資産の育て方</p>
+</header>
+<div class="container">
+    <div class="article-grid">
+        <a href="article01.html" class="article-card">
+            <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" alt="A8.net">
+            <div class="card-content">
+                <span class="category-label">INVESTMENT</span>
+                <h2>副業ブログの第一歩！A8.netで収益を作る方法</h2>
+                <p>2026.02.06</p>
+            </div>
+        </a>
     </div>
+    <a href="index.html" class="back-home">← Home へ戻る</a>
+</div>
+<footer style="text-align:center; padding:60px 0; color:#bbb; font-size:0.8em; letter-spacing:2px;">© 2026 MOKUMOKU.</footer>
 </body>
 </html>

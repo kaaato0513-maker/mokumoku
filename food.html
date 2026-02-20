@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food & Drink | MOKUMOKU</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FOOD & DRINK - MOKUMOKU</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #fafafa; font-family: sans-serif; margin: 0; color: #333; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
-        .article-card { 
-            text-decoration: none; color: inherit; border-radius: 12px; 
-            overflow: hidden; background: #fff; transition: 0.3s; display: block; 
-            margin-bottom: 30px;
-        }
-        .rich-shadow { box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4) !important; }
-        .article-card:hover { transform: translateY(-5px); }
-        h1 { font-family: 'Noto Serif JP', serif; font-size: 2em; text-align: center; margin-bottom: 50px; letter-spacing: 2px; }
+        body { writing-mode: horizontal-tb !important; font-family: sans-serif; margin: 0; background-color: #fafafa; color: #333; line-height: 1.8; }
+        header { background: #d98880; padding: 60px 20px; text-align: center; color: #fff; }
+        header h1 { font-family: 'Noto Serif JP', serif; font-size: 2.5em; letter-spacing: 5px; margin: 0; }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .category-label { display: inline-block; background: #d98880; color: #fff; padding: 5px 15px; font-size: 0.75em; font-weight: bold; border-radius: 2px; margin-bottom: 15px; }
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
+        .article-card { text-decoration: none; color: inherit; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .article-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .article-card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-content h2 { font-family: 'Noto Serif JP', serif; font-size: 1.3em; margin: 0 0 15px; line-height: 1.5; }
+        .card-content p { font-size: 0.85em; color: #bbb; margin: 0; }
+        .back-home { display: block; text-align: center; margin-top: 80px; text-decoration: none; color: #d98880; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Food & Drink</h1>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
-            
-            <a href="article03.html" class="article-card rich-shadow">
-                <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=500&q=80" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:25px;">
-                    <span style="color:#d98880; font-size:0.7em; font-weight:bold;">NEW</span>
-                    <h2 style="margin:10px 0 0; font-size:1.1em; line-height:1.6; font-family: 'Noto Serif JP', serif;">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロン</h2>
-                    <p style="color:#bbb; font-size:0.8em; margin-top:10px;">2026.02.11</p>
-                </div>
-            </a>
-
+<header>
+    <h1>FOOD & DRINK</h1>
+    <p style="margin-top:10px; opacity:0.9;">心を満たす、至福の一皿と一杯</p>
+</header>
+<div class="container">
+    <div class="article-grid">
+        <a href="article03.html" class="article-card">
+            <img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=800" alt="マカロン">
+            <div class="card-content">
+                <span class="category-label">FOOD & DRINK</span>
+                <h2>【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロン</h2>
+                <p>2026.02.11</p>
             </div>
-
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="index.html" style="color: #888; text-decoration: none; font-size: 0.9em; letter-spacing: 2px;">← BACK TO HOME</a>
-        </div>
+        </a>
     </div>
+    <a href="index.html" class="back-home">← Home へ戻る</a>
+</div>
+<footer style="text-align:center; padding:60px 0; color:#bbb; font-size:0.8em; letter-spacing:2px;">© 2026 MOKUMOKU.</footer>
 </body>
 </html>
