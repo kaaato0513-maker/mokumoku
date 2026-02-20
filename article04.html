@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 80px 20px;
         }
@@ -29,47 +29,48 @@
             width: 55%; 
             height: auto;
             margin: 60px auto;
-            border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
 
         h2 {
             font-size: 1.8em;
-            border-left: 4px solid #76a08a;
+            border-left: 5px solid #76a08a;
             padding-left: 20px;
-            margin: 80px 0 40px;
+            margin: 100px 0 40px;
             letter-spacing: 0.1em;
+            line-height: 1.4;
         }
 
-        p { margin-bottom: 30px; }
+        p { margin-bottom: 35px; }
 
         /* 導入文のリッチカード */
         .intro-card {
             background: #fdfdfd;
             border: 1px solid #f0f0f0;
-            padding: 50px;
-            margin-bottom: 60px;
+            padding: 60px 40px;
+            margin-bottom: 80px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
         }
 
-        /* 実食（使用）アドバイス枠 */
+        /* アドバイス枠（ゴールド系） */
         .advice-box {
             border: 1px solid #d4af37;
-            padding: 35px;
-            margin: 60px 0;
+            padding: 40px;
+            margin: 80px 0;
             background-color: #fffaf0;
             position: relative;
         }
 
         .advice-box::before {
-            content: "ADVICE";
+            content: "EXPERTS COLUMN";
             position: absolute;
             top: -12px;
             left: 20px;
             background: #d4af37;
             color: #fff;
-            padding: 0 15px;
+            padding: 2px 15px;
             font-size: 0.7em;
             letter-spacing: 2px;
         }
@@ -77,28 +78,30 @@
         /* CTAエリア */
         .cta-area {
             text-align: center;
-            background: #fafafa;
-            padding: 60px 20px;
-            margin-top: 100px;
-            border-radius: 8px;
+            background: #f9f9f9;
+            padding: 80px 20px;
+            margin-top: 120px;
+            border-radius: 12px;
         }
 
         .btn-official {
             display: inline-block;
-            padding: 18px 50px;
+            padding: 20px 60px;
             background: #333;
             color: #fff !important;
             text-decoration: none;
             font-weight: bold;
             letter-spacing: 2px;
-            transition: 0.3s;
-            margin-bottom: 30px;
+            transition: 0.4s;
+            margin-bottom: 35px;
+            border-radius: 2px;
         }
 
-        .btn-official:hover { background: #555; }
+        .btn-official:hover { background: #000; transform: translateY(-3px); }
         
-        ul { padding-left: 20px; margin-bottom: 30px; }
-        li { margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-bottom: 35px; list-style-type: none; }
+        li { margin-bottom: 15px; position: relative; padding-left: 20px; }
+        li::before { content: "・"; position: absolute; left: 0; color: #76a08a; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -106,23 +109,25 @@
 <div class="container">
     <article>
         <header class="intro-card">
-            <p>なんとなく感じる「肌の変化」に、気づいていますか？</p>
+            <p>なんとなく感じる「肌の変化」に、気づいていますか</p>
             <p>20代の頃は、少し寝不足でもすぐ戻っていた肌。<br>シンプルなケアでも、十分うるおっていたはずなのに。</p>
-            <p style="font-weight: bold; color: #76a08a;">
+            <p>30代に入ってから、こんな変化を感じることはありませんか。</p>
+            <p style="font-weight: bold; color: #76a08a; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 20px 0; margin: 30px 0;">
                 朝のメイク前、鏡を見たときの印象が少し違う<br>
                 乾燥していないのに、どこかツヤが足りない<br>
-                肌のコンディションに波が出てきた
+                肌のコンディションに波が出てきた<br>
+                スキンケアを変えても、決定的な違いがわからない
             </p>
-            <p>それは、肌のうるおいの質が変わり始めているサインかもしれません。</p>
+            <p>はっきりしたトラブルではないけれど、以前より「満足できない」という感覚。<br>それは、肌のうるおいの質が変わり始めているサインかもしれません。</p>
         </header>
 
         <section>
             <h2>30代の肌に必要なのは「補う」より「巡らせる」ケア</h2>
-            <p>年齢とともに、肌は水分を抱え込みにくくなります。表面は整って見えても、内側は満たされていない。その状態では、どんなに保湿しても時間が経つと乾いた印象に戻ってしまいます。</p>
-            <p>だからこそ重要なのは、肌にうるおいを与えるだけでなく、角層のすみずみまで行き渡る環境を整えること。軽やかさと密度を両立したケアが、肌のコンディションを底上げします。</p>
+            <p>年齢とともに、肌は水分を抱え込みにくくなります。表面は整って見えても、内側は満たされていない。</p>
+            <p>その状態では、どんなに保湿しても時間が経つと乾いた印象に戻ってしまいます。だからこそ重要なのは、肌にうるおいを与えるだけでなく、角層のすみずみまで行き渡る環境を整えること。軽やかさと密度を両立したケアが、肌のコンディションを底上げします。</p>
         </section>
 
-        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" alt="Skin Care Concept" class="post-image">
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80" alt="Skin Care Moment" class="post-image">
 
         <section>
             <h2>忙しい毎日でも続けられることが、美しさをつくる</h2>
@@ -138,23 +143,27 @@
                 <li>頬に自然なツヤが出る</li>
                 <li>顔全体が明るく見える</li>
             </ul>
+            <p>過度なケアをしなくても、ベースが整うことで印象は大きく変わります。「最近肌の調子いいね」と言われるような、さりげない変化を目指した設計です。</p>
         </section>
 
-        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=800&q=80" alt="Water and Clean Skin" class="post-image">
-
-        <div class="advice-box">
-            <p><strong>Expert Advice：自分を整える時間</strong></p>
-            <p>慌ただしい一日の中で、スキンケアの時間は数分かもしれません。それでも、肌に触れるその時間は、自分を整える大切なひととき。無理をしない、頑張りすぎない。それでもきちんと応えてくれるケアが、毎日の安心につながります。</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&w=1200&q=80" alt="Pure Water Texture" class="post-image">
 
         <section>
-            <h2>今日の選択が、明日の肌をつくる</h2>
-            <p>肌は、急には変わりません。でも、確実に変わっていきます。何を使うか、どう続けるか。その小さな選択の積み重ねが、未来の印象を形づくります。今の肌にやさしく向き合いながら、これからの自分に心地よいケアを。</p>
+            <h2>肌が整うと、自分への向き合い方も変わる</h2>
+            <p>肌の状態は、気分に大きく影響します。コンディションが良い日は、服選びもメイクも自然と前向きになる。人と会う予定が楽しみになる、写真に写る自分に自信が持てる、何気ない日常が少し心地よく感じる。</p>
+            <p>スキンケアは、単なる美容習慣ではなく、日々の気分を整える時間でもあります。今の肌にやさしく向き合いながら、これからの自分に心地よいケアを。触れるたびに感じるうるおいとやわらかさを、毎日の習慣にしてみてください。</p>
         </section>
 
+        <div class="advice-box">
+            <p><strong>Expert Advice：未来の肌のために</strong></p>
+            <p>30代は、これからの肌を左右する大切な時期。特別なケアよりも、毎日続く習慣が重要になります。高価なアイテムを増やすより、肌に合うシンプルなケアを継続する。その積み重ねが、数年後の肌印象を大きく変えていきます。</p>
+            <p>慌ただしい一日の中で、スキンケアの時間は数分かもしれません。それでも、肌に触れるその時間は、自分を整える大切なひとときです。</p>
+        </div>
+
         <footer class="cta-area">
-            <p>触れるたびに感じるうるおいとやわらかさを、毎日の習慣に。</p>
-            <a href="https://px.a8.net/svt/ejp?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" rel="nofollow" class="btn-official">詳細をチェックする</a>
+            <p><strong>今日の選択が、明日の肌をつくる</strong></p>
+            <p>何を使うか、どう続けるか。その小さな選択の積み重ねが、未来の印象を形づくります。</p>
+            <a href="https://px.a8.net/svt/ejp?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" rel="nofollow" class="btn-official">詳細を公式サイトで見る</a>
             
             <div class="banner">
                 <a href="https://px.a8.net/svt/ejp?a8mat=4AXEWE+7CXWZ6+5TX8+5YZ75" rel="nofollow">
