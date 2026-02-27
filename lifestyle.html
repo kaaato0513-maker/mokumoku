@@ -6,39 +6,131 @@
     <title>LIFESTYLE - MOKUMOKU</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { writing-mode: horizontal-tb !important; font-family: sans-serif; margin: 0; background-color: #fafafa; color: #333; line-height: 1.8; }
-        header { background: #5d6d7e; padding: 60px 20px; text-align: center; color: #fff; }
-        header h1 { font-family: 'Noto Serif JP', serif; font-size: 2.5em; letter-spacing: 5px; margin: 0; }
-        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-        .category-label { display: inline-block; background: #5d6d7e; color: #fff; padding: 5px 15px; font-size: 0.75em; font-weight: bold; border-radius: 2px; margin-bottom: 15px; }
-        .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
-        .article-card { text-decoration: none; color: inherit; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .article-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .article-card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 25px; }
-        .card-content h2 { font-family: 'Noto Serif JP', serif; font-size: 1.3em; margin: 0 0 15px; line-height: 1.5; }
-        .card-content p { font-size: 0.85em; color: #bbb; margin: 0; }
-        .back-home { display: block; text-align: center; margin-top: 80px; text-decoration: none; color: #5d6d7e; font-weight: bold; }
+        /* 共通設定：完全横書き固定 */
+        body { 
+            writing-mode: horizontal-tb !important; 
+            font-family: sans-serif; 
+            margin: 0; 
+            background-color: #fafafa; 
+            color: #333; 
+            line-height: 1.8; 
+        }
+
+        /* ヘッダー：カテゴリー専用 */
+        .category-header {
+            height: 250px;
+            background: #5d6d7e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .category-header h1 { font-family: 'Noto Serif JP', serif; font-size: 2.5em; letter-spacing: 8px; margin: 0; }
+        .category-header p { font-size: 0.9em; letter-spacing: 3px; opacity: 0.8; margin-top: 10px; }
+
+        /* ナビゲーション */
+        .nav-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-link a {
+            text-decoration: none;
+            color: #5d6d7e;
+            font-size: 0.85em;
+            font-weight: bold;
+            border: 1px solid #5d6d7e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .nav-link a:hover { background: #5d6d7e; color: #fff; }
+
+        /* 記事カード */
+        .article-card {
+            text-decoration: none;
+            color: inherit;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            transition: 0.3s;
+            display: block;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .rich-shadow { box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important; }
+
+        /* レイアウト */
+        .content-wrapper { display: flex; gap: 40px; flex-wrap: wrap; max-width: 1100px; margin: 40px auto 100px; padding: 0 20px; }
+        .main-content { flex: 1; min-width: 300px; }
+        .sidebar { width: 320px; min-width: 300px; }
+
+        .section-title { font-size: 0.8em; letter-spacing: 2px; color: #888; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        @media(max-width: 850px) {
+            .sidebar { width: 100%; }
+            .content-wrapper { gap: 20px; }
+        }
     </style>
 </head>
 <body>
-<header>
+
+<header class="category-header">
     <h1>LIFESTYLE</h1>
-    <p style="margin-top:10px; opacity:0.9;">日々の暮らしを、もっと心地よく、もっと豊かに</p>
+    <p>暮らしを整え、日常を彩る</p>
 </header>
-<div class="container">
-    <div class="article-grid">
-        <a href="article02.html" class="article-card">
-            <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=800" alt="NELLマットレス">
-            <div class="card-content">
-                <span class="category-label">LIFESTYLE</span>
-                <h2>「寝返り」が人生を変える。NELLマットレス完全ガイド</h2>
-                <p>2026.02.07</p>
+
+<div class="nav-link">
+    <a href="index.html">← HOMEへ戻る</a>
+</div>
+
+<div class="content-wrapper">
+    <main class="main-content">
+        <div class="section-title">ARTICLES</div>
+        
+        <a href="article05.html" class="article-card rich-shadow">
+            <img src="./bed-main.jpg" style="width:100%; height:300px; object-fit:cover;" alt="源ベッド">
+            <div style="padding:25px;">
+                <span style="color:#5d6d7e; font-weight:bold; font-size:0.7em;">LIFESTYLE</span>
+                <h3 style="font-family:'Noto Serif JP',serif; font-size:1.5em; margin:10px 0;">眠りが変わると、毎日の心地よさが変わる。国産ヒノキベッドの魅力</h3>
+                <p style="color:#999; font-size:0.85em;">2026.02.26</p>
             </div>
         </a>
-    </div>
-    <a href="index.html" class="back-home">← Home へ戻る</a>
+
+        <a href="article02.html" class="article-card">
+            <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=1000" style="width:100%; height:250px; object-fit:cover;" alt="NELLマットレス">
+            <div style="padding:25px;">
+                <span style="color:#5d6d7e; font-weight:bold; font-size:0.7em;">LIFESTYLE</span>
+                <h3 style="font-family:'Noto Serif JP',serif; font-size:1.4em; margin:10px 0;">「寝返り」が人生を変える。NELLマットレス完全ガイド</h3>
+                <p style="color:#999; font-size:0.85em;">2026.02.07</p>
+            </div>
+        </a>
+    </main>
+
+    <aside class="sidebar">
+        <div class="section-title">PROFILE</div>
+        <div class="rich-shadow" style="background:#fff; border-radius:12px; padding:40px 30px; text-align:center; border:none;">
+            <div style="width:140px; height:140px; margin:0 auto 25px; border-radius:50%; overflow:hidden; border:5px solid #fff; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+                <img src="./s.jpg" alt="MOKUMOKU Icon" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <h4 style="font-family:'Noto Serif JP',serif; margin:0; font-size:1.4em; letter-spacing:1.5px;">MOKUMOKU</h4>
+            <p style="font-size:0.75em; color:#999; margin-bottom:25px; letter-spacing:2px;">Editor</p>
+            <p style="font-size:0.85em; color:#555; text-align:left; line-height:2;">
+                「黙々（もくもく）」と一つのことに没頭し、集中する。それは時に視野を狭めるように見えますが、何事も成長し変化を成し遂げるには、必要なプロセスだと考えています。<br><br>
+                自身の生活をより良く変えていく過程を発信することで、見てくださる方々の生活の助けにもなれば。そんな願いを込めて、日々を綴っています。
+            </p>
+        </div>
+    </aside>
 </div>
-<footer style="text-align:center; padding:60px 0; color:#bbb; font-size:0.8em; letter-spacing:2px;">© 2026 MOKUMOKU.</footer>
+
+<footer style="text-align:center; padding:100px 0; background:#222; color:#666; font-size:0.75em; letter-spacing:3px;">
+    © 2026 MOKUMOKU.
+</footer>
+
 </body>
 </html>

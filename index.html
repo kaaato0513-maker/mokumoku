@@ -57,24 +57,8 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
+        /* メイン記事用の深い影 */
         .rich-shadow { box-shadow: 0 35px 70px rgba(0,0,0,0.15) !important; }
-
-        /* 画像エリアの安定化 */
-        .img-container {
-            width: 100%;
-            height: 320px;
-            background-color: #eee; /* 読み込めない時の背景 */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
 
         /* レイアウト */
         .content-wrapper { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
@@ -101,15 +85,15 @@
         <main class="main-content">
             <h2 style="font-size:0.8em; letter-spacing:2px; color:#888; margin-bottom:20px;">LATEST POST</h2>
             
-            <a href="article04.html" class="article-card rich-shadow" style="margin-bottom:40px; border:none;">
-                <div class="img-container">
-                    <img src="./brand-of-item.jpg" alt="30代からのスキンケア" loading="lazy">
-                </div>
+            <a href="article05.html" class="article-card rich-shadow" style="margin-bottom:40px; border:none;">
+                <img src="./bed-main.jpg" 
+                     style="width:100%; height:320px; object-fit:cover;" 
+                     alt="眠りが変わると、毎日の心地よさが変わる">
                 
                 <div style="padding:30px;">
-                    <span style="color:#76a08a; font-weight:bold; font-size:0.7em;">RECOMMEND</span>
-                    <h3 style="font-family:'Noto Serif JP',serif; font-size:1.6em; margin:15px 0;">30代からの「巡らせる」スキンケア。未来の肌を整えるシンプルな習慣</h3>
-                    <p style="color:#999; font-size:0.85em;">2026.02.20 — おすすめ</p>
+                    <span style="color:#5d6d7e; font-weight:bold; font-size:0.7em;">LIFESTYLE</span>
+                    <h3 style="font-family:'Noto Serif JP',serif; font-size:1.6em; margin:15px 0;">眠りが変わると、毎日の心地よさが変わる。国産ヒノキベッドの魅力</h3>
+                    <p style="color:#999; font-size:0.85em;">2026.02.26 — 暮らし</p>
                 </div>
             </a>
         </main>
@@ -142,11 +126,19 @@
     <section style="margin-top:100px;">
         <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4em; border-bottom:2px solid #333; padding-bottom:12px; margin-bottom:35px; letter-spacing:1px;">Past Articles</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:30px;">
+            <a href="article04.html" class="article-card">
+                <img src="./brand-of-item.jpg" style="width:100%; height:200px; object-fit:cover;" alt="スキンケア">
+                <div style="padding:20px;">
+                    <span style="color:#76a08a; font-weight:bold; font-size:0.65em;">RECOMMEND</span>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">30代からの「巡らせる」スキンケア</h4>
+                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.20</p>
+                </div>
+            </a>
             <a href="article03.html" class="article-card">
                 <img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
                 <div style="padding:20px;">
                     <span style="color:#d98880; font-weight:bold; font-size:0.65em;">FOOD & DRINK</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">【実食レビュー】MAMEIL（マメイル）の生チョコ入りマカロン</h4>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">MAMEILの生チョコ入りマカロン</h4>
                     <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.11</p>
                 </div>
             </a>
@@ -154,16 +146,8 @@
                 <img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=500" style="width:100%; height:200px; object-fit:cover;">
                 <div style="padding:20px;">
                     <span style="color:#5d6d7e; font-weight:bold; font-size:0.65em;">LIFESTYLE</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">「寝返り」が人生を変える。NELLマットレス完全ガイド</h4>
+                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">NELLマットレス完全ガイド</h4>
                     <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.07</p>
-                </div>
-            </a>
-            <a href="article01.html" class="article-card">
-                <img src="https://support.a8.net/as/as_promo_material/images/pc_capt.png" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <span style="color:#a98b73; font-weight:bold; font-size:0.65em;">INVESTMENT</span>
-                    <h4 style="margin:10px 0 0; font-size:1.1em; line-height:1.6;">副業ブログの第一歩！A8.netで収益を作る方法</h4>
-                    <p style="color:#bbb; font-size:0.85em; margin-top:10px;">2026.02.06</p>
                 </div>
             </a>
         </div>
