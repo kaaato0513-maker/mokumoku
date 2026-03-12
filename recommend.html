@@ -6,76 +6,19 @@
     <title>RECOMMEND - MOKUMOKU</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 共通設定：完全横書き固定 */
-        body { 
-            writing-mode: horizontal-tb !important; 
-            font-family: sans-serif; 
-            margin: 0; 
-            background-color: #fafafa; 
-            color: #333; 
-            line-height: 1.8; 
-        }
-
-        /* ヘッダー：カテゴリー専用 */
-        .category-header {
-            height: 250px;
-            background: #76a08a;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
+        body { writing-mode: horizontal-tb !important; font-family: sans-serif; margin: 0; background-color: #fafafa; color: #333; line-height: 1.8; }
+        .category-header { height: 250px; background: #76a08a; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
         .category-header h1 { font-family: 'Noto Serif JP', serif; font-size: 2.5em; letter-spacing: 8px; margin: 0; }
         .category-header p { font-size: 0.9em; letter-spacing: 3px; opacity: 0.8; margin-top: 10px; }
-
-        /* ナビゲーション */
-        .nav-link {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .nav-link a {
-            text-decoration: none;
-            color: #76a08a;
-            font-size: 0.85em;
-            font-weight: bold;
-            border: 1px solid #76a08a;
-            padding: 8px 20px;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
-        .nav-link a:hover { background: #76a08a; color: #fff; }
-
-        /* 記事カード */
-        .article-card {
-            text-decoration: none;
-            color: inherit;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #fff;
-            transition: 0.3s;
-            display: block;
-            margin-bottom: 30px;
-            border: 1px solid #eee;
-        }
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .rich-shadow { box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important; }
-
-        /* レイアウト */
+        .nav-link { text-align: center; margin: 20px 0; }
+        .nav-link a { text-decoration: none; color: #76a08a; font-size: 0.85em; font-weight: bold; border: 1px solid #76a08a; padding: 8px 20px; border-radius: 20px; transition: 0.3s; }
+        .article-card { text-decoration: none; color: inherit; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s; display: block; margin-bottom: 30px; border: 1px solid #eee; }
+        .article-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .content-wrapper { display: flex; gap: 40px; flex-wrap: wrap; max-width: 1100px; margin: 40px auto 100px; padding: 0 20px; }
         .main-content { flex: 1; min-width: 300px; }
         .sidebar { width: 320px; min-width: 300px; }
-
         .section-title { font-size: 0.8em; letter-spacing: 2px; color: #888; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
-        @media(max-width: 850px) {
-            .sidebar { width: 100%; }
-            .content-wrapper { gap: 20px; }
-        }
+        @media(max-width: 850px) { .sidebar { width: 100%; } .content-wrapper { gap: 20px; } }
     </style>
 </head>
 <body>
@@ -85,16 +28,14 @@
     <p>日常を豊かにする、厳選したアイテム</p>
 </header>
 
-<div class="nav-link">
-    <a href="index.html">← HOMEへ戻る</a>
-</div>
+<div class="nav-link"><a href="index.html">← HOMEへ戻る</a></div>
 
 <div class="content-wrapper">
     <main class="main-content">
         <div class="section-title">NEW ARTICLES</div>
         
-        <a href="article06.html" class="article-card rich-shadow">
-            <img src="./image.png" style="width:100%; height:300px; object-fit:cover;" alt="ムダ毛ケア">
+        <a href="article06.html" class="article-card" style="box-shadow: 0 25px 50px rgba(0,0,0,0.1);">
+            <img src="./dione.png" style="width:100%; height:300px; object-fit:cover;" alt="ムダ毛ケア">
             <div style="padding:25px;">
                 <span style="color:#76a08a; font-weight:bold; font-size:0.7em;">RECOMMEND</span>
                 <h3 style="font-family:'Noto Serif JP',serif; font-size:1.5em; margin:10px 0;">意外と見られている、腕やワキのムダ毛。清潔感を守るやさしいケア</h3>
@@ -106,7 +47,7 @@
             <img src="./brand-of-item.jpg" style="width:100%; height:250px; object-fit:cover;" alt="スキンケア">
             <div style="padding:25px;">
                 <span style="color:#76a08a; font-weight:bold; font-size:0.7em;">RECOMMEND</span>
-                <h3 style="font-family:'Noto Serif JP',serif; font-size:1.4em; margin:10px 0;">30代からの「巡らせる」スキンケア。潤いと輝きを保つヒント</h3>
+                <h3 style="font-family:'Noto Serif JP',serif; font-size:1.4em; margin:10px 0;">30代からの「巡らせる」スキンケア。</h3>
                 <p style="color:#999; font-size:0.85em;">2026.02.20</p>
             </div>
         </a>
@@ -114,15 +55,13 @@
 
     <aside class="sidebar">
         <div class="section-title">PROFILE</div>
-        <div class="rich-shadow" style="background:#fff; border-radius:12px; padding:40px 30px; text-align:center; border:none;">
+        <div style="background:#fff; border-radius:12px; padding:40px 30px; text-align:center; border:1px solid #eee;">
             <div style="width:140px; height:140px; margin:0 auto 25px; border-radius:50%; overflow:hidden; border:5px solid #fff; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
                 <img src="./s.jpg" alt="MOKUMOKU Icon" style="width:100%; height:100%; object-fit:cover;">
             </div>
             <h4 style="font-family:'Noto Serif JP',serif; margin:0; font-size:1.4em; letter-spacing:1.5px;">MOKUMOKU</h4>
-            <p style="font-size:0.75em; color:#999; margin-bottom:25px; letter-spacing:2px;">Editor</p>
             <p style="font-size:0.85em; color:#555; text-align:left; line-height:2;">
-                「黙々（もくもく）」と一つのことに没頭し、集中する。それは時に視野を狭めるように見えますが、何事も成長し変化を成し遂げるには、必要なプロセスだと考えています。<br><br>
-                自身の生活をより良く変えていく過程を発信することで、見てくださる方々の生活の助けにもなれば。そんな願いを込めて、日々を綴っています。
+                「黙々（もくもく）」と一つのことに没頭し、集中する。自身の生活をより良く変えていく過程を発信することで、見てくださる方々の生活の助けにもなれば。
             </p>
         </div>
     </aside>
